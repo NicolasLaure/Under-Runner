@@ -13,6 +13,7 @@ namespace Health
         [SerializeField] private bool canTakeDamage = true;
 
         [Header("events")]
+        [SerializeField] private UnityEvent onHit;
         [SerializeField] private VoidEventChannelSO onDeathEvent;
         [SerializeField] private IntEventChannelSO onTakeDamageEvent;
         [SerializeField] private IntEventChannelSO onSumHealthEvent;
@@ -94,6 +95,7 @@ namespace Health
             else
             {
                 onTakeDamageEvent?.RaiseEvent(CurrentHp);
+                onHit?.Invoke();
                 onInternalTakeDamageEvent?.Invoke(CurrentHp);
             }
 

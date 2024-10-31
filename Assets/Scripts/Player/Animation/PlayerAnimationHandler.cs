@@ -30,6 +30,11 @@ public class PlayerAnimationHandler : MonoBehaviour
     {
         _animator.SetBool(Attack, true);
     }
+    
+    public void RestartAttackAnimation()
+    {
+        _animator.CrossFade(Attack, 0.25f);
+    }
 
     public void SetAttackProgress(float progress)
     {

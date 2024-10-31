@@ -158,7 +158,7 @@ namespace Player
                 if (!isEndingAttack && percentage > doubleAttackExitPercentage && HasBufferedAttack())
                 {
                     ClearAttackBuffer();
-                    animationHandler.StartAttackAnimation();
+                    animationHandler.RestartAttackAnimation();
                     meleeWeapon.enabled = true;
                     startTime = Time.time;
                 }
