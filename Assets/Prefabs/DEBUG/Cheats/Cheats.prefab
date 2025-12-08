@@ -57,7 +57,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fa794346500391479d632e5c62c2026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiPrefab: {fileID: 7443165596597045508, guid: 9ef0ac0c7ab011245b97701792a9a7ee, type: 3}
-  canvas: {fileID: 0}
   config: {fileID: 11400000, guid: be54c49186e450b4a924ab57a26bf53c, type: 2}
   playerHealth: {fileID: 0}
+  onHandleCheatsUIEvent: {fileID: 11400000, guid: cb4b0c73eec6b3148a29be4ec2e0fbd6, type: 2}
