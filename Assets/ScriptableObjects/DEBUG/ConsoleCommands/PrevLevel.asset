@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11749ffb5862c374298bbd37db45ccc0, type: 3}
   m_Name: PrevLevel
   m_EditorClassIdentifier: 
-  commandWord: previous
+  commandWord: prev
