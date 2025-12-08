@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace DEBUG.Console
 {
@@ -12,6 +13,7 @@ namespace DEBUG.Console
 
         [SerializeField] private TMP_InputField inputField;
         [SerializeField] private TextMeshProUGUI logsText;
+        [SerializeField] private ScrollRect scrollRect;
 
         public void HandleLog(string logString, string stackTrace, LogType type)
         {
@@ -34,10 +36,13 @@ namespace DEBUG.Console
             receivedLog += logString;
             receivedLog += "</color>\n";
             logsText.text += receivedLog;
+            LayoutRebuilder.ForceRebuildLayoutImmediate(logsText.rectTransform);
+            scrollRect.verticalNormalizedPosition = 0f;
         }
 
         public void ProcessCommand(string input)
         {
+            Debug.Log(input);
             inputField.text = string.Empty;
             inputField.ActivateInputField();
 

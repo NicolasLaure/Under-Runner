@@ -57,7 +57,6 @@ namespace Input
 
         public void HandleConsoleToggle(InputAction.CallbackContext context)
         {
-            Debug.Log($"CTRL F12");
             if (context.started)
                 onConsoleToggle?.Invoke();
         }
