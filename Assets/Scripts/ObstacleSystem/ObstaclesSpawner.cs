@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Events;
 using MapBounds;
+using Player.Controllers;
 using Roads;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -18,6 +19,7 @@ namespace ObstacleSystem
         [SerializeField] private VoidEventChannelSO onObstaclesDisabled;
         [SerializeField] private GameObjectEventChannelSO onObstacleDestroyed;
         [SerializeField] private MapBoundsSO mapBounds;
+        [SerializeField] private RoadPoints roadPoints;
         
         private bool _shouldSpawnObject;
         private Coroutine _spawnCoroutine;
@@ -142,7 +144,7 @@ namespace ObstacleSystem
             Vector3 spawnPosition = new Vector3();
             while (!hasPossibleSpawnPosition)
             {
-                spawnPosition = new Vector3(Random.Range(-width / 2, width / 2), height, 0);
+                spawnPosition = new Vector3(roadPoints.xPoints[Random.Range(0, roadPoints.xPoints.Length)], height, 0);
 
                 if (_lastSpawnedObstacle == null || Mathf.Abs(spawnPosition.x - _lastObstacleSpawnPosition.x) >
                     _minDistanceBetweenObstacles)

@@ -11,6 +11,7 @@ namespace LevelManagement.Sequences
         [SerializeField] private MinionManager minionManager;
         
         [Header("Events")] [SerializeField] private VoidEventChannelSO onAllMinionsDestroyedEvent;
+        [SerializeField] private VoidEventChannelSO onMinionsSequenceStart;
         
         private bool _areAllMinionsDestroyed;
         private IEnumerator _postAction;
@@ -38,6 +39,7 @@ namespace LevelManagement.Sequences
 
         private IEnumerator MinionSequencePreActions()
         {
+            onMinionsSequenceStart.RaiseEvent();
             _areAllMinionsDestroyed = false;
 
             yield return null;
