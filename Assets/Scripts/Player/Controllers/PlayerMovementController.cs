@@ -10,90 +10,67 @@ namespace Player
 {
     public class PlayerMovementController : PlayerController
     {
-        [SerializeField] private PauseSO pauseData;
-
-        [Header("Input")] [SerializeField] private InputHandlerSO inputHandler;
-        [SerializeField] private Vector3EventChannelSO onPlayerNewPositionEvent;
-        [SerializeField] private Vector3EventChannelSO onPlayerMovementEvent;
-        [SerializeField] private VoidEventChannelSO onCinematicStarted;
-        [SerializeField] private VoidEventChannelSO onCinematicFinished;
+        [Header("Events")] 
+        [SerializeField] private VoidEventChannelSO onObstaclesStartEvent;
+        [SerializeField] private VoidEventChannelSO onMinionsStartEvent;
         
-        [Header("MapBounds")]
-        [SerializeField] private MapBoundsSO boundsConfig;
+        private IMovementController _actualMovementController;
 
-        [Header("Movement Config")]
-        [SerializeField] private float speed;
+        public Vector3 CurrentDir => _actualMovementController.GetCurrentDir();
 
-        private Vector3 _currentDir;
-        private Coroutine _handleTiltCoroutine;
-        private bool _canMove = true;
-        private bool _isInCinematic = false;
-
-        public Vector3 CurrentDir => _currentDir;
-
-        protected override void OnEnable()
+        public override void OnEnable()
         {
             base.OnEnable();
-            onCinematicStarted?.onEvent.AddListener(HandleCinematic);
-            onCinematicFinished?.onEvent.AddListener(HandleEndCinematic);
-            inputHandler.onPlayerMove.AddListener(HandleMovement);
+            _actualMovementController ??= GetComponent<PlayerLinearMovementController>();
+            _actualMovementController.OnEnable();
+            onMinionsStartEvent?.onEvent.AddListener(HandleFreeMovement);
+            onObstaclesStartEvent?.onEvent.AddListener(HandleRoadsMovement);
+        }
+
+        private void HandleFreeMovement()
+        {
+            Debug.Log("HERE?");
+            SetActualMovementController(GetComponent<PlayerFreeMovementController>());
+        }
+
+        private void HandleRoadsMovement()
+        {
+            SetActualMovementController(GetComponent<PlayerLinearMovementController>());
         }
 
         private void OnDisable()
         {
-            onCinematicStarted?.onEvent.RemoveListener(HandleCinematic);
-            onCinematicFinished?.onEvent.RemoveListener(HandleEndCinematic);
-            inputHandler.onPlayerMove.RemoveListener(HandleMovement);
+            _actualMovementController.OnDisable();
+            onMinionsStartEvent?.onEvent.RemoveListener(HandleFreeMovement);
+            onObstaclesStartEvent?.onEvent.RemoveListener(HandleRoadsMovement);
         }
 
         public void OnUpdate()
         {
-            if (_canMove && !_isInCinematic)
-            {
-                Vector3 previousPosition = transform.position;
-                transform.position = boundsConfig.ClampPosition(transform.position + _currentDir * (speed * Time.deltaTime), playerCollider.bounds.size);
-                onPlayerNewPositionEvent?.RaiseEvent(transform.position);
-
-                onPlayerMovementEvent?.RaiseEvent(transform.position - previousPosition);
-            }
-        }
-        
-        private void HandleEndCinematic()
-        {
-            _isInCinematic = false;
-        }
-
-        private void HandleCinematic()
-        {
-            _isInCinematic = true;
-        }
-
-        private void HandleMovement(Vector2 dir)
-        {
-            if (_currentDir == Vector3.zero && _canMove)
-                playerAgent.ChangeStateToMove();
-            else if (dir == Vector2.zero && _canMove)
-                playerAgent.ChangeStateToIdle();
-
-            _currentDir.x = dir.x;
-            _currentDir.y = 0;
-            _currentDir.z = dir.y;
+            _actualMovementController.OnUpdate();
         }
 
         public void TiltAround()
         {
-            Vector2 normalizedDir = new Vector2(_currentDir.x, _currentDir.z).normalized;
-            animatorHandler.SetPlayerDirection(normalizedDir);
+            _actualMovementController.TiltAround();
         }
 
         public void ToggleMoveability()
         {
-            _canMove = !_canMove;
+            _actualMovementController.ToggleMoveability();
         }
 
         public void ToggleMoveability(bool value)
         {
-            _canMove = value;
+            _actualMovementController.ToggleMoveability(value);
+        }
+
+        public void SetActualMovementController(IMovementController newController)
+        {
+            _actualMovementController.OnDisable();
+            _actualMovementController = newController;
+            _actualMovementController.OnEnable();
+            _actualMovementController.HandleZPosition();
         }
     }
 }
