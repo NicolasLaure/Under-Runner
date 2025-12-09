@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playersVelocity: 10
   otherPlayersEndZPosition: 44
-  playerInitZPosition: 1.15
+  playerInitZPosition: 0.12
   startCameraData: {fileID: 11400000, guid: c52b19016cf766c4990fae22f19b1cbb, type: 2}
   isFirstGameplay: 1

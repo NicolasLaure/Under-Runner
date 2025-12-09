@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onRoadInstantiatedEvent: {fileID: 11400000, guid: 9a17af58b63bd434bad0073e1d20336e, type: 2}
   onRoadDeletedEvent: {fileID: 11400000, guid: 4bc8cfdb79af96847a96a4deec258151, type: 2}
-  onObstacleTriggeredEvent: {fileID: 11400000, guid: 7106f5096e05ed54685959ed962a6d12, type: 2}
   onObstaclesDisabled: {fileID: 11400000, guid: 9b61d8e3cffb1c84f98d7d4315aa3c7f, type: 2}
   onObstacleDestroyed: {fileID: 11400000, guid: f1b6a34449833df43ab719979c9e2d13, type: 2}
   mapBounds: {fileID: 11400000, guid: ec9fc6062f1b51d4596422a3e4f7f265, type: 2}
+  roadPoints: {fileID: 11400000, guid: 65e02a0ddacbac149be4e35d0029f363, type: 2}

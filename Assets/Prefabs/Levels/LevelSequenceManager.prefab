@@ -68,6 +68,7 @@ MonoBehaviour:
   warningData: {fileID: 11400000, guid: 5123a6d0b21422b45b8976e51f08d83d, type: 2}
   obstaclesSpawner: {fileID: 0}
   onNewRoadManagerVelocity: {fileID: 11400000, guid: 21efa5342df3fb84ab0e65389176d7cf, type: 2}
+  onObstacleStartEvent: {fileID: 11400000, guid: 12428b39ae4fb2248a8c70447716fbd7, type: 2}
   onProgressBarChangeEvent: {fileID: 11400000, guid: e510a2ae5cc7ffb40b5e982f51399a93, type: 2}
   onProgressBarActiveEvent: {fileID: 11400000, guid: beab834ba12792d4a91e8638176bf181, type: 2}
   onWarning: {fileID: 11400000, guid: 8dfae64905a75794693d0b402fce18f1, type: 2}
@@ -86,6 +87,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minionManager: {fileID: 0}
   onAllMinionsDestroyedEvent: {fileID: 11400000, guid: f39644c8bb7ad1d4bbb9e63f25300263, type: 2}
+  onMinionsSequenceStart: {fileID: 11400000, guid: 0d884f883c4bf0a4b912bab10e63c18f, type: 2}
 --- !u!114 &8538605700224022850
 MonoBehaviour:
   m_ObjectHideFlags: 0
