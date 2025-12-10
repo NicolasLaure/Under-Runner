@@ -13,7 +13,7 @@ namespace Player
     public class PlayerDashController : PlayerController
     {
         [SerializeField] private PauseSO pauseData;
-        
+
         [Header("Input")]
         [SerializeField] private InputHandlerSO inputHandler;
 
@@ -43,9 +43,9 @@ namespace Player
         [SerializeField] private VoidEventChannelSO onCinematicFinished;
         [SerializeField] private VoidEventChannelSO onCinematicStarted;
 
-        [Header("Internal events")] 
+        [Header("Internal events")]
         [SerializeField] private UnityEvent onDash;
-        
+
         private PlayerMovementController _movementController;
         private HealthPoints _healthPoints;
 
@@ -61,7 +61,7 @@ namespace Player
         private bool _hasActivatedFastCooldown;
         private bool _isPlayerInCinematic;
         private Coroutine _cooldownCoroutine;
-        
+
         private void Awake()
         {
             _movementController = GetComponent<PlayerMovementController>();
@@ -125,6 +125,9 @@ namespace Player
 
         public void HandlePhantomCoroutine()
         {
+            if (!_healthPoints.CanTakeDamage)
+                return;
+
             StartCoroutine(PhantomCoroutine());
         }
 
@@ -154,14 +157,15 @@ namespace Player
                 timer = Time.time - startTime;
                 if (_hasAvoidedSomething)
                 {
-                    if(_cooldownCoroutine != null)
+                    if (_cooldownCoroutine != null)
                         StopCoroutine(_cooldownCoroutine);
-                
+
                     _cooldownCoroutine = StartCoroutine(CoolDownCoroutine());
 
                     _hasAvoidedSomething = false;
                     _hasActivatedFastCooldown = true;
                 }
+
                 yield return null;
             }
 
@@ -172,9 +176,9 @@ namespace Player
 
             if (!_hasAvoidedSomething && !_hasActivatedFastCooldown)
             {
-                if(_cooldownCoroutine != null)
+                if (_cooldownCoroutine != null)
                     StopCoroutine(_cooldownCoroutine);
-                
+
                 _cooldownCoroutine = StartCoroutine(CoolDownCoroutine());
             }
 

@@ -33,6 +33,9 @@ namespace Health
         [SerializeField] private UnityEvent<int> onInternalTakeDamageEvent;
         [SerializeField] private UnityEvent<int> onInternalInitializeMaxHealthEvent;
 
+
+        public bool CanTakeDamage => canTakeDamage;
+
         public int MaxHealth
         {
             get { return maxHealth; }

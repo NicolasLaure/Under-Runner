@@ -22,7 +22,7 @@ namespace DEBUG.Cheats
 
         public void ToggleInvincibility(bool value)
         {
-            playerHealth.ToggleInvulnerability(value);
+            playerHealth.SetCanTakeDamage(!value);
         }
 #endif
     }
