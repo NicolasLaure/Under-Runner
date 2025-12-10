@@ -143,7 +143,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 0.12.1
+  bundleVersion: 1.0.0
   preloadedAssets:
   - {fileID: 11400000, guid: 2006044aaba2a464cac5567f0eae31d6, type: 2}
   metroInputSource: 0
@@ -166,7 +166,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Standalone: com.DefaultCompany.TSDV-Desarrollo3
+    Standalone: com.Under-Makers-Interactive.Under-Runner
   buildNumber:
     Standalone: 0
     VisionOS: 0
