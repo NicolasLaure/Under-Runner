@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7001128459367196710}
   - component: {fileID: 6323146884951081703}
+  - component: {fileID: 7327944914726091797}
   m_Layer: 0
   m_Name: CheatsUI
   m_TagString: Untagged
@@ -47,6 +48,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 8240132916495123836}
   onHandleCanvas: {fileID: 11400000, guid: cb4b0c73eec6b3148a29be4ec2e0fbd6, type: 2}
+--- !u!114 &7327944914726091797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4480754712413837215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ece04e7476918224d8f56ef527763172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _input: {fileID: 11400000, guid: 4902f51743585ca40aec021ece06aa06, type: 2}
+  panelChannel: {fileID: 11400000, guid: cb4b0c73eec6b3148a29be4ec2e0fbd6, type: 2}
+  console: {fileID: 6291762875299944718}
 --- !u!1001 &6278952994692125355
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55,6 +71,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7001128459367196710}
     m_Modifications:
+    - target: {fileID: 755906739538969906, guid: c6a0fb543c525cd48bfbc9d88d9ef2eb, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 755906739538969906, guid: c6a0fb543c525cd48bfbc9d88d9ef2eb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2644039886859482103, guid: c6a0fb543c525cd48bfbc9d88d9ef2eb, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -141,13 +165,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2700338167047641047, guid: c6a0fb543c525cd48bfbc9d88d9ef2eb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6a0fb543c525cd48bfbc9d88d9ef2eb, type: 3}
+--- !u!114 &6291762875299944718 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 32517527049440165, guid: c6a0fb543c525cd48bfbc9d88d9ef2eb, type: 3}
+  m_PrefabInstance: {fileID: 6278952994692125355}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95b6a3430d7514546b0f2f58131f1c2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8240132916495123836 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2700338167047641047, guid: c6a0fb543c525cd48bfbc9d88d9ef2eb, type: 3}

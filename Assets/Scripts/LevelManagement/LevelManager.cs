@@ -34,7 +34,7 @@ namespace LevelManagement
         [SerializeField] private StringEventChannelSo onOpenSceneEvent;
 
         [Header("Music")] [SerializeField] private AK.Wwise.State resettedMusicState;
-        
+
         private int _loopConfigIndex;
         private LevelLoopSO _actualLoopConfig;
         private StartLevelSequence _startLevelSequence;
@@ -124,21 +124,36 @@ namespace LevelManagement
             }
         }
 
-        private void NextLevel()
+        public bool TrySetLevel(int value)
         {
-            _loopConfigIndex++;
+            if (value >= loopConfigs.Count || value < 0)
+                return false;
+
+            _loopConfigIndex = value;
             SetActualLoop();
             if (_actualLoopConfig != null)
                 levelLoopManager.StartLevelSequence(_actualLoopConfig);
             else
                 levelLoopManager.StopSequence();
+
+            return true;
+        }
+
+        public void NextLevel()
+        {
+            TrySetLevel(_loopConfigIndex + 1);
+        }
+
+        public void PreviousLevel()
+        {
+            TrySetLevel(_loopConfigIndex - 1);
         }
 
         private void SetActualLoop()
         {
-            if (_loopConfigIndex >= loopConfigs.Count)
+            if (_loopConfigIndex >= loopConfigs.Count || _loopConfigIndex < 0)
             {
-                Debug.LogWarning("Loop index more than count");
+                Debug.LogWarning("Loop index out of range");
                 _actualLoopConfig = null;
                 return;
             }

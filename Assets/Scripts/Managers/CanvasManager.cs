@@ -1,8 +1,5 @@
-using System;
-using Events;
 using Events.ScriptableObjects;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 namespace Managers
 {

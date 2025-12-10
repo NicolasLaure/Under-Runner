@@ -1,5 +1,3 @@
-using DEBUG.Input;
-using Health;
 using UnityEngine;
 
 namespace DEBUG.Cheats

@@ -33,6 +33,9 @@ namespace Health
         [SerializeField] private UnityEvent<int> onInternalTakeDamageEvent;
         [SerializeField] private UnityEvent<int> onInternalInitializeMaxHealthEvent;
 
+
+        public bool CanTakeDamage => canTakeDamage;
+
         public int MaxHealth
         {
             get { return maxHealth; }
@@ -101,7 +104,7 @@ namespace Health
 
             if (shouldFreeze)
                 StartCoroutine(StunTime());
-            
+
             if (IsDead() && !_hasBeenDead)
             {
                 _hasBeenDead = true;
@@ -159,7 +162,7 @@ namespace Health
 
         public void ToggleInvulnerability(bool value)
         {
-            canTakeDamage = value;
+            canTakeDamage = !value;
         }
 #endif
     }
