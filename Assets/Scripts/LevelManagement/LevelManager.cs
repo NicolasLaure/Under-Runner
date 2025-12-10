@@ -124,24 +124,29 @@ namespace LevelManagement
             }
         }
 
-        public void SetLevel(int value)
+        public bool TrySetLevel(int value)
         {
+            if (value >= loopConfigs.Count || value < 0)
+                return false;
+
             _loopConfigIndex = value;
             SetActualLoop();
             if (_actualLoopConfig != null)
                 levelLoopManager.StartLevelSequence(_actualLoopConfig);
             else
                 levelLoopManager.StopSequence();
+
+            return true;
         }
 
         public void NextLevel()
         {
-            SetLevel(_loopConfigIndex + 1);
+            TrySetLevel(_loopConfigIndex + 1);
         }
 
         public void PreviousLevel()
         {
-            SetLevel(_loopConfigIndex - 1);
+            TrySetLevel(_loopConfigIndex - 1);
         }
 
         private void SetActualLoop()

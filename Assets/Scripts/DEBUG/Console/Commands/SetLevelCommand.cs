@@ -20,7 +20,12 @@ public class SetLevelCommand : ConsoleCommand
             return false;
         }
 
-        levelManager.SetLevel(int.Parse(args[0]));
+        if (!levelManager.TrySetLevel(int.Parse(args[0]) - 1))
+        {
+            Debug.Log($"Failed To Set Level");
+            return false;
+        }
+
         Debug.Log($"Set Level to: {int.Parse(args[0])}");
         return true;
     }
