@@ -16,7 +16,9 @@ namespace LevelManagement.Sequences
         [Header("Spawners")]
         [SerializeField] private ObstaclesSpawner obstaclesSpawner;
 
-        [Header("Events")] [SerializeField] private Vector3EventChannelSO onNewRoadManagerVelocity;
+        [Header("Events")] 
+        [SerializeField] private Vector3EventChannelSO onNewRoadManagerVelocity;
+        [SerializeField] private VoidEventChannelSO onObstacleStartEvent;
         
         [Header("UI Events")] 
         [SerializeField] private FloatEventChannelSO onProgressBarChangeEvent;
@@ -88,6 +90,8 @@ namespace LevelManagement.Sequences
     
         private IEnumerator ObstacleSequencePreActions()
         {
+            onObstacleStartEvent.RaiseEvent();
+            
             if (_levelConfig.obstacleData.phaseState != null)
             {
                 AkSoundEngine.SetState(_levelConfig.obstacleData.phaseState.GroupId,

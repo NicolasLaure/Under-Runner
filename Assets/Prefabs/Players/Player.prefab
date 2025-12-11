@@ -165,6 +165,7 @@ GameObject:
   - component: {fileID: 1792199589205503695}
   - component: {fileID: 2923836183902203749}
   - component: {fileID: 6487825136179884570}
+  - component: {fileID: 2242081901482848218}
   - component: {fileID: 4699157676241342615}
   - component: {fileID: 6481343404815373606}
   - component: {fileID: 1856129533111618862}
@@ -174,6 +175,7 @@ GameObject:
   - component: {fileID: 4892114609088342519}
   - component: {fileID: 765996105383918817}
   - component: {fileID: 2323143666000183156}
+  - component: {fileID: 626264622134041491}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -446,6 +448,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 98cd89dde1d6f6f45bee14bef0b50fb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animatorHandler: {fileID: 977276183979043023}
+  onObstaclesStartEvent: {fileID: 11400000, guid: 12428b39ae4fb2248a8c70447716fbd7, type: 2}
+  onMinionsStartEvent: {fileID: 11400000, guid: 0d884f883c4bf0a4b912bab10e63c18f, type: 2}
+--- !u!114 &2242081901482848218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4780633370198621073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47f6808aa5ede684b917db6e90aa5aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animatorHandler: {fileID: 977276183979043023}
@@ -927,7 +944,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d302774136f72774596c0cf5f8a782e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseData: {fileID: 11400000, guid: 050aabf23c6e8a747ba6431bbbb165f5, type: 2}
   motorSound:
     idInternal: 0
     valueGuidInternal: 
@@ -936,9 +952,18 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 12638027f27905240bec290035d3983b, type: 2}
+  motorSoundCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  motorChangeDuration: 0
   initMotorValue: 50
   motorDiff: 10
   onMovementStateChange: {fileID: 11400000, guid: e6b8f0b36674c7942b1b837307b25416, type: 2}
+  onNewMotorValue: {fileID: 0}
+  onGameplayReset: {fileID: 0}
   hitSound:
     idInternal: 0
     valueGuidInternal: 
@@ -983,6 +1008,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onMovementStateChange: {fileID: 11400000, guid: e6b8f0b36674c7942b1b837307b25416, type: 2}
   inputHandler: {fileID: 11400000, guid: 4902f51743585ca40aec021ece06aa06, type: 2}
+--- !u!114 &626264622134041491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4780633370198621073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e008ec888362cc4e9c4bf454d156284, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animatorHandler: {fileID: 977276183979043023}
+  roadPoints: {fileID: 11400000, guid: 65e02a0ddacbac149be4e35d0029f363, type: 2}
+  inputHandler: {fileID: 11400000, guid: 4902f51743585ca40aec021ece06aa06, type: 2}
+  onPlayerNewPositionEvent: {fileID: 11400000, guid: 1edae3268f02d1c4190e82ddfa3be357, type: 2}
+  onPlayerMovementEvent: {fileID: 11400000, guid: 6a4bb4062610c7b4fa1d1458d1248c67, type: 2}
+  onCinematicStarted: {fileID: 11400000, guid: b711b8f3d88f6614bb9d23a652188ca8, type: 2}
+  onCinematicFinished: {fileID: 11400000, guid: 83f6a3608cca1b64a9e546fae228e30e, type: 2}
+  velocity: 10
+  movementThreshold: 0.8
 --- !u!1 &6811374093388968665
 GameObject:
   m_ObjectHideFlags: 0

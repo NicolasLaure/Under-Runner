@@ -581,6 +581,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 626264622134041491, guid: 3083adca6baa6e84f9ab522107f1414b, type: 3}
+      propertyPath: velocity
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 765996105383918817, guid: 3083adca6baa6e84f9ab522107f1414b, type: 3}
       propertyPath: motorDiff
       value: 10

@@ -68,7 +68,7 @@ namespace Player
             _healthPoints ??= GetComponent<HealthPoints>();
         }
 
-        protected override void OnEnable()
+        public override void OnEnable()
         {
             base.OnEnable();
             _hasAvoidedSomething = false;

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: SecondLoopConfig
   m_EditorClassIdentifier: 
   obstacleData:
-    obstaclesDuration: 15
-    obstacleCooldown: 0.25
+    obstaclesDuration: 20
+    obstacleCooldown: 0.2
     timeToWarn: 1
     minDistance: 1
     phaseState:

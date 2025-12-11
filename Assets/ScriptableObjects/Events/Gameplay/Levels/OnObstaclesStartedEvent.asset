@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fc6f109a907fdb4a98a37f0b1ceacfc, type: 3}
-  m_Name: StartLevelData
+  m_Script: {fileID: 11500000, guid: ba575276cd3938b44b7619fe190a4731, type: 3}
+  m_Name: OnObstaclesStartedEvent
   m_EditorClassIdentifier: 
-  playersVelocity: 10
-  otherPlayersEndZPosition: 44
-  playerInitZPosition: 0.12
-  startCameraData: {fileID: 11400000, guid: c52b19016cf766c4990fae22f19b1cbb, type: 2}
-  isFirstGameplay: 1
+  onEvent:
+    m_PersistentCalls:
+      m_Calls: []
