@@ -1,14 +1,11 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Events;
 using Events.ScriptableObjects;
 using LevelManagement;
-using Minion.Controllers;
 using Minion.ScriptableObjects;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 namespace Minion.Manager
@@ -29,7 +26,9 @@ namespace Minion.Manager
         private Coroutine _spawnCoroutine;
         private MinionSpawnerSO _minionSpawnerConfig;
         private MinionsManagerSO _minionManagerConfig;
-        
+
+        public bool IsSpawning => _isSpawning;
+
         protected void OnEnable()
         {
             _spawnCoroutine = StartCoroutine(SpawnMinions());
@@ -54,7 +53,7 @@ namespace Minion.Manager
 
         private void StopSpawnCoroutine()
         {
-            if(_spawnCoroutine != null)
+            if (_spawnCoroutine != null)
                 StopCoroutine(_spawnCoroutine);
         }
 
@@ -92,7 +91,7 @@ namespace Minion.Manager
                 onAllMinionsDestroyedEvent?.RaiseEvent();
             }
         }
-        
+
 
         private IEnumerator SpawnMinions()
         {
