@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7829513038546499568}
   - component: {fileID: 4466498850514915177}
+  - component: {fileID: 4761229721410700183}
   m_Layer: 0
   m_Name: MinionsManager
   m_TagString: Untagged
@@ -44,11 +45,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 251a514f377b22240881251299a10997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minionSpawnerConfig: {fileID: 11400000, guid: 243747caa98ab304da81a7d8e918fbe4, type: 2}
-  minionManagerConfig: {fileID: 11400000, guid: 91033f8a42d6eca46a3415f50b958ebf, type: 2}
   player: {fileID: 0}
   onMinionDeletedEvent: {fileID: 11400000, guid: 7767544c749c3594abcb1520bca52614, type: 2}
   onAllMinionsDestroyedEvent: {fileID: 11400000, guid: f39644c8bb7ad1d4bbb9e63f25300263, type: 2}
   onGameplayEndEvent: {fileID: 11400000, guid: 96d5e0721ad70d74bb1e98f8163618a2, type: 2}
   onMinionWantsToAttackEvent: {fileID: 11400000, guid: a6854f84a0adb75498a2c9cf2c71c69a, type: 2}
   onMinionAttackedEvent: {fileID: 11400000, guid: eb9504e07a181c74e80867e1fcde1d18, type: 2}
+--- !u!114 &4761229721410700183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9142350358736105451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a04096fcd0db804187e0624059a8e75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  minionManager: {fileID: 4466498850514915177}
+  laserBotPrefab: {fileID: 7277983695973012495, guid: 1ab296dc0fb32d24d95c5dc305eadc37, type: 3}
+  minSpawnTime: 2
+  maxSpawnTime: 5
+  leftSpawnPos: {x: -10, y: 1.1, z: 20}
+  middleSpawnPos: {x: 0, y: 1.1, z: 20}
+  rightSpawnPos: {x: 10, y: 1.1, z: 20}

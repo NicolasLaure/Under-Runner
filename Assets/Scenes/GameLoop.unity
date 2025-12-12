@@ -1893,14 +1893,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1059696745}
-    - target: {fileID: 4466498850514915177, guid: e0a2e2952249fb844824a22ebd583350, type: 3}
-      propertyPath: onGameplayEndEvent
+    - target: {fileID: 4761229721410700183, guid: e0a2e2952249fb844824a22ebd583350, type: 3}
+      propertyPath: player
       value: 
-      objectReference: {fileID: 11400000, guid: 96d5e0721ad70d74bb1e98f8163618a2, type: 2}
-    - target: {fileID: 4466498850514915177, guid: e0a2e2952249fb844824a22ebd583350, type: 3}
-      propertyPath: onCanMinionsAttackEvent
-      value: 
-      objectReference: {fileID: 11400000, guid: d2afa1c9cce709a4e8fea048047d0169, type: 2}
+      objectReference: {fileID: 1059696745}
     - target: {fileID: 7829513038546499568, guid: e0a2e2952249fb844824a22ebd583350, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.1742406

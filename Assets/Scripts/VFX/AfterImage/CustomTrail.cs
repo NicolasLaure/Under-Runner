@@ -27,6 +27,9 @@ namespace VFX.AfterImage
         {
             foreach (var afterImageObject in _afterImageObjects.ToList())
             {
+                if (afterImageObject == null)
+                    continue;
+
                 afterImageObject.SetActive(false);
                 _afterImageObjects.Remove(afterImageObject);
             }

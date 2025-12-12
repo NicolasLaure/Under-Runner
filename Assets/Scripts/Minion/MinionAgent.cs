@@ -1,11 +1,9 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using Events.ScriptableObjects;
 using FSM;
 using Health;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace Minion
 {
