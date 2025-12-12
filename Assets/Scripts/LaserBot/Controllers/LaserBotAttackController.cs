@@ -35,15 +35,39 @@ namespace LaserBot.Controllers
         {
             float timer = 0;
             float startTime = Time.time;
+            float delta = 0;
+            float prevTime = Time.time;
 
             onAttack?.Invoke();
 
             laser.SetActive(true);
             laser.GetComponent<Renderer>().material = laserChargeMat;
 
+            Vector3 dir = Vector3.zero;
             while (timer < minionConfig.chargeDuration)
             {
                 timer = Time.time - startTime;
+                delta = Time.time - prevTime;
+
+                if ((botAgent.dir == Directions.Left || botAgent.dir == Directions.Right) && Mathf.Abs(transform.position.z - botAgent.Player.transform.position.z) > minionConfig.minDistance)
+                {
+                    if (botAgent.Player.transform.position.z < transform.position.z)
+                        dir = Vector3.back;
+                    else
+                        dir = Vector3.forward;
+                }
+                else if (botAgent.dir == Directions.Down && Mathf.Abs(transform.position.x - botAgent.Player.transform.position.x) > minionConfig.minDistance)
+                {
+                    if (botAgent.Player.transform.position.x < transform.position.x)
+                        dir = Vector3.left;
+                    else
+                        dir = Vector3.right;
+                }
+
+                if (dir != Vector3.zero)
+                    transform.Translate(dir * (minionConfig.chargeMovSpeed * delta), Space.World);
+
+                prevTime = Time.time;
                 yield return null;
             }
 

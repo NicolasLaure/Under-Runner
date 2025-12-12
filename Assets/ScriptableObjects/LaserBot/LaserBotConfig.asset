@@ -15,6 +15,7 @@ MonoBehaviour:
   movementSpeed: 5
   minDistance: 1.25
   chargeDuration: 1
+  chargeMovSpeed: 2.5
   attackDuration: 0.5
   damage: 5
   entryExitDuration: 1.25

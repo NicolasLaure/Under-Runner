@@ -9,6 +9,7 @@ public class LaserBotConfigSO : ScriptableObject
 
     [Header("Attack")]
     public float chargeDuration;
+    public float chargeMovSpeed;
     public float attackDuration;
     public int damage;
 
