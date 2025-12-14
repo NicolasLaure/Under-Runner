@@ -61,6 +61,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bad7ed67c1dedd74391c2903ae07acea, type: 3}
+--- !u!1 &1039697611915847069 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1955083682652094714, guid: bad7ed67c1dedd74391c2903ae07acea, type: 3}
+  m_PrefabInstance: {fileID: 1534712864398697831}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8748993594982178590 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7793143159900371577, guid: bad7ed67c1dedd74391c2903ae07acea, type: 3}
@@ -86,6 +91,14 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.010743648
       objectReference: {fileID: 0}
+    - target: {fileID: 7322198831318614348, guid: c02fe28806b8ebe408584f7b7177db58, type: 3}
+      propertyPath: debrisVfx
+      value: 
+      objectReference: {fileID: 5373850869466122253}
+    - target: {fileID: 7322198831318614348, guid: c02fe28806b8ebe408584f7b7177db58, type: 3}
+      propertyPath: objectsToInactivate.Array.data[0]
+      value: 
+      objectReference: {fileID: 1039697611915847069}
     - target: {fileID: 7360055294922511000, guid: c02fe28806b8ebe408584f7b7177db58, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -155,6 +168,11 @@ PrefabInstance:
       addedObject: {fileID: 8748993594982178590}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c02fe28806b8ebe408584f7b7177db58, type: 3}
+--- !u!1 &5373850869466122253 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7709099285679755867, guid: c02fe28806b8ebe408584f7b7177db58, type: 3}
+  m_PrefabInstance: {fileID: 2337359481301310038}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6631019064424047953 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8964947929010650887, guid: c02fe28806b8ebe408584f7b7177db58, type: 3}
