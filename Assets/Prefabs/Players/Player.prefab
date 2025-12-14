@@ -1028,7 +1028,9 @@ MonoBehaviour:
   onCinematicStarted: {fileID: 11400000, guid: b711b8f3d88f6614bb9d23a652188ca8, type: 2}
   onCinematicFinished: {fileID: 11400000, guid: 83f6a3608cca1b64a9e546fae228e30e, type: 2}
   velocity: 10
+  zVelocity: 10
   movementThreshold: 0.8
+  zThreshold: 0.1
 --- !u!1 &6811374093388968665
 GameObject:
   m_ObjectHideFlags: 0
@@ -3583,6 +3585,26 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8891297334280618237, guid: c4ed38c72957f2241ad144a1614956d9, type: 3}
+      propertyPath: InitialModule.size3D
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8891297334280618237, guid: c4ed38c72957f2241ad144a1614956d9, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8891297334280618237, guid: c4ed38c72957f2241ad144a1614956d9, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8891297334280618237, guid: c4ed38c72957f2241ad144a1614956d9, type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8891297334280618237, guid: c4ed38c72957f2241ad144a1614956d9, type: 3}
+      propertyPath: InitialModule.startSpeed.minScalar
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8892177129927377689, guid: c4ed38c72957f2241ad144a1614956d9, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -3591,6 +3613,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8764043878647920493, guid: c4ed38c72957f2241ad144a1614956d9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7995355678503801115}
     - targetCorrespondingSourceObject: {fileID: 7684677543225702287, guid: c4ed38c72957f2241ad144a1614956d9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4854816220632811280}
@@ -3623,11 +3648,31 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1 &4422658800581425171 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8764473058345964675, guid: c4ed38c72957f2241ad144a1614956d9, type: 3}
+  m_PrefabInstance: {fileID: 4954480141307243664}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4423091225681632253 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8764043878647920493, guid: c4ed38c72957f2241ad144a1614956d9, type: 3}
   m_PrefabInstance: {fileID: 4954480141307243664}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7995355678503801115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4423091225681632253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e98a0fe5037230342b17a749f8f9aa91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToChange: 2
+  onNewMotorFlamesEvent: {fileID: 11400000, guid: 6e88f925c958a7b40ac86c25fbb9ec60, type: 2}
+  smallFlames: {fileID: 4422658800581425171}
 --- !u!4 &4425622040197308303 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8767152486562788127, guid: c4ed38c72957f2241ad144a1614956d9, type: 3}

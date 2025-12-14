@@ -32,7 +32,7 @@ namespace LevelManagement
             _levelConfig = loopConfig;
             onPlayerNewMotorValue?.RaiseEvent(_levelConfig.playerData.motorRtpcValue);
 
-            obstacleSequence.SetupSequence(_levelConfig.roadData);
+            obstacleSequence.SetupSequence(_levelConfig.obstacleData.roadData);
             minionsSequence.SetupSequence(_levelConfig.minionsData);
             bossSequence.SetupSequence(_levelConfig.bossData);
             

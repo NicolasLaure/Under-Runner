@@ -19,7 +19,7 @@ namespace Credits
         private void OnEnable()
         {
             onCameraMovement?.RaiseEvent(cameraData);
-            onRoadManagerVelocity?.RaiseEvent(firstLevelConfig.roadData.roadVelocity);
+            onRoadManagerVelocity?.RaiseEvent(firstLevelConfig.minionsData.roadData.roadVelocity);
         }
     }
 }

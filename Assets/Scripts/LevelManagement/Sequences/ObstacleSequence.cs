@@ -5,6 +5,7 @@ using ObstacleSystem;
 using UI;
 using UnityEngine;
 using Utils;
+using VFX;
 
 namespace LevelManagement.Sequences
 {
@@ -12,6 +13,7 @@ namespace LevelManagement.Sequences
     {
         [SerializeField] private float progressBarMaxValue = 1f;
         [SerializeField] private WarningTextSO warningData;
+        [SerializeField] private MotorFlamesData motorData;
         
         [Header("Spawners")]
         [SerializeField] private ObstaclesSpawner obstaclesSpawner;
@@ -19,6 +21,7 @@ namespace LevelManagement.Sequences
         [Header("Events")] 
         [SerializeField] private Vector3EventChannelSO onNewRoadManagerVelocity;
         [SerializeField] private VoidEventChannelSO onObstacleStartEvent;
+        [SerializeField] private MotorFlamesChannelSO onNewMotorData;
         
         [Header("UI Events")] 
         [SerializeField] private FloatEventChannelSO onProgressBarChangeEvent;
@@ -91,6 +94,7 @@ namespace LevelManagement.Sequences
         private IEnumerator ObstacleSequencePreActions()
         {
             onObstacleStartEvent.RaiseEvent();
+            onNewMotorData?.RaiseEvent(motorData);
             
             if (_levelConfig.obstacleData.phaseState != null)
             {
