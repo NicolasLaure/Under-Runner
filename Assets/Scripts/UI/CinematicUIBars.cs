@@ -11,6 +11,7 @@ namespace UI
         [SerializeField] private GameObject topBar;
         [SerializeField] private GameObject bottomBar;
         [SerializeField] private float barMovementVelocity;
+        [SerializeField] private float waitTime = 0.5f;
         
         [Header("Events")]
         [SerializeField] private VoidEventChannelSO onStartCinematicCanvas;
@@ -76,6 +77,8 @@ namespace UI
 
         private IEnumerator MoveBarsToScreenCoroutine()
         {
+            yield return new WaitForSeconds(waitTime);
+
             RectTransform topTransform = topBar.GetComponent<RectTransform>();
             RectTransform bottomTransform = bottomBar.GetComponent<RectTransform>();
 

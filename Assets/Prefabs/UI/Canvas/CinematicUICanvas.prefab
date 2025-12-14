@@ -163,7 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topBar: {fileID: 7826982671392726680}
   bottomBar: {fileID: 1623614056936049374}
-  barMovementVelocity: 25
+  barMovementVelocity: 75
   onStartCinematicCanvas: {fileID: 11400000, guid: f342628a186bcbe4e929001b50ef74a0, type: 2}
   onEndCinematicCanvas: {fileID: 11400000, guid: 68da0e8aef79f8041932fb582d16cfcb, type: 2}
   onCinematicCanvasFinishedAnimation: {fileID: 11400000, guid: 2948d17a0f181ff4b9eb0ce82353b1c2, type: 2}
