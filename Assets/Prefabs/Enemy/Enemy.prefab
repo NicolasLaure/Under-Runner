@@ -147,13 +147,14 @@ GameObject:
   - component: {fileID: 4729209335015210498}
   - component: {fileID: 6771036244692420438}
   - component: {fileID: 4860931461339575274}
+  - component: {fileID: 4386282392605196373}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &673461572015972428
 Transform:
   m_ObjectHideFlags: 0
@@ -523,10 +524,34 @@ MonoBehaviour:
   onDamageAvoidedEvent: {fileID: 0}
   onHit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4386282392605196373}
+        m_TargetAssemblyTypeName: Enemy.EnemySoundController, Assembly-CSharp
+        m_MethodName: Hit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onInternalDeathEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4386282392605196373}
+        m_TargetAssemblyTypeName: Enemy.EnemySoundController, Assembly-CSharp
+        m_MethodName: WonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onInternalResetEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -664,6 +689,28 @@ MonoBehaviour:
   enemyConfig: {fileID: 11400000, guid: 3e495b6192997ef46978af1453840058, type: 2}
   onEnemyLeftEvent: {fileID: 11400000, guid: 4eccd1b235bb84a40ac8ca3371247ebd, type: 2}
   movementDelay: 0.75
+--- !u!114 &4386282392605196373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8961736479340173517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1cb251b83ea9c9428246415e7dd887c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  creditsState:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1c7ae185825a58a4fa217bba5639a19d, type: 2}
+  hitSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4f010eb13f4c0a14b95c95a5a43ba964, type: 2}
 --- !u!1001 &1094134541066028378
 PrefabInstance:
   m_ObjectHideFlags: 0
