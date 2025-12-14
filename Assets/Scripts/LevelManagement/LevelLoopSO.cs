@@ -11,6 +11,7 @@ namespace LevelManagement
         public float obstacleCooldown;
         public float timeToWarn = 4.0f;
         public float minDistance;
+        public RoadData roadData;
         public AK.Wwise.State phaseState;
     }
 
@@ -43,6 +44,7 @@ namespace LevelManagement
     {
         public MinionsManagerSO managerData;
         public MinionSpawnerSO spawnerData;
+        public RoadData roadData;
     }
 
     [Serializable]
@@ -55,7 +57,6 @@ namespace LevelManagement
     public class LevelLoopSO : ScriptableObject
     {
         public ObstacleData obstacleData;
-        public RoadData roadData;
         public BossData bossData;
         public MinionsData minionsData;
         public PlayerData playerData;
