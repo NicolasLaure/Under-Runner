@@ -9,7 +9,7 @@ namespace Managers.Pause
     {
         [SerializeField] private InputHandlerSO inputHandler;
         [SerializeField] private PauseSO pauseData;
-        
+
         [Header("Events")]
         [SerializeField] private BoolEventChannelSO onHandlePauseEvent;
         [SerializeField] private VoidEventChannelSO onCinematicStarted;
@@ -18,12 +18,13 @@ namespace Managers.Pause
         [SerializeField] private VoidEventChannelSO onGameplayReset;
         [SerializeField] private VoidEventChannelSO onCinematicEnded;
 
-        [Header("Music")] 
+        [Header("Music")]
         [SerializeField] private AK.Wwise.Event pauseMusicEvent;
         [SerializeField] private AK.Wwise.Event unpauseMusicEvent;
-        
+
         private float _lastTimeScale;
         private bool _isPauseBlocked;
+
         private void OnEnable()
         {
             pauseData.isPaused = false;
@@ -48,7 +49,7 @@ namespace Managers.Pause
             onHandlePauseEvent?.onTypedEvent.RemoveListener(HandlePause);
             inputHandler?.onPauseToggle.RemoveListener(HandlePause);
         }
-        
+
         private void HandleUnblockPause()
         {
             _isPauseBlocked = false;
@@ -78,8 +79,10 @@ namespace Managers.Pause
 
         private void HandlePause()
         {
-            if(!pauseData.isPaused && !_isPauseBlocked)
-                onHandlePauseEvent.RaiseEvent(true);
+            if (_isPauseBlocked)
+                return;
+
+            onHandlePauseEvent.RaiseEvent(!pauseData.isPaused);
         }
     }
 }
