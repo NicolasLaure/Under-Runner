@@ -110,7 +110,7 @@ namespace ObstacleSystem
             float roadDepth = road.GetComponentInChildren<RoadDepthObtainer>().GetRoadDepth();
 
             float roadVelocity = road.GetComponentInChildren<Movement>().GetVelocity();
-            float obstaclesToInstantiateCount = Mathf.Floor(roadDepth / roadVelocity / _spawnCoolDown);
+            float obstaclesToInstantiateCount = Mathf.Ceil(roadDepth / roadVelocity / _spawnCoolDown);
 
             for (int i = 0; i < obstaclesToInstantiateCount; i++)
             {

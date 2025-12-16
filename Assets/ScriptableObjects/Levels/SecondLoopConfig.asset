@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacleData:
     obstaclesDuration: 20
-    obstacleCooldown: 0.2
+    obstacleCooldown: 0.3
     timeToWarn: 1
     minDistance: 1
+    roadData:
+      roadVelocity: {x: 0, y: 0, z: -70}
     phaseState:
       idInternal: 0
       valueGuidInternal: 
       groupIdInternal: 0
       groupGuidInternal: 
       WwiseObjectReference: {fileID: 11400000, guid: 4c5a01ae729c32546aa9a500bece4768, type: 2}
-  roadData:
-    roadVelocity: {x: 0, y: 0, z: -40}
   bossData:
     hitPointsToNextPhase: 50
     fallingAttackData:
@@ -42,5 +42,7 @@ MonoBehaviour:
   minionsData:
     managerData: {fileID: 11400000, guid: 8cd32077c5b690d438b85c3fe7c4cc97, type: 2}
     spawnerData: {fileID: 11400000, guid: d46629b6d3b2c1f46b45324709c13e79, type: 2}
+    roadData:
+      roadVelocity: {x: 0, y: 0, z: -30}
   playerData:
     motorRtpcValue: 50

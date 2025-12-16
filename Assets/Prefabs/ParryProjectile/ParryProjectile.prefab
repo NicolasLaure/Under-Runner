@@ -50,6 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d357731716db241b8e568bdd0be98f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deflectionCooldownStartTime: 0.2
   secondForceAcceleration: 4
   secondsInFollowForce: 2
   damage: 20
@@ -150,6 +151,10 @@ MonoBehaviour:
   destroyParticlesSeconds: 2
   model: {fileID: 4549070928176536417}
   parryBomb: {fileID: 3134848022867861568}
+  explosionSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 48da098cfbbf8de4a848797b0d2830af, type: 2}
 --- !u!1 &4549070928176536417
 GameObject:
   m_ObjectHideFlags: 0

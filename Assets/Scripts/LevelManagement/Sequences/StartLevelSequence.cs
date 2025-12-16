@@ -53,9 +53,9 @@ namespace LevelManagement.Sequences
         {
             Sequence startSequence = new Sequence();
 
-            startSequence.AddPreAction(StartRoads(roadData));
             startSequence.AddPreAction(RaiseStartCinematicEvent());
             startSequence.AddPreAction(HandleStartCinematicCanvas());
+            startSequence.AddPreAction(StartRoads(roadData));
             startSequence.AddPreAction(MoveOtherPlayers());
             startSequence.SetAction(MovePlayerToMiddle());
             startSequence.AddPostAction(HandleStopCinematicCanvas());
@@ -160,7 +160,7 @@ namespace LevelManagement.Sequences
             onCinematicUICanvasEvent?.RaiseEvent(true);
             onStartCinematicCanvas?.RaiseEvent();
             _isCinematicCanvasAnimating = true;
-            yield return new WaitWhile(() => _isCinematicCanvasAnimating);
+            if(!startLevelConfig.isFirstGameplay) yield return new WaitWhile(() => _isCinematicCanvasAnimating);
         }
 
         private void HandleFinishedAnimation()
