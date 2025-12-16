@@ -10,6 +10,7 @@ namespace Attacks.ParryProjectile
         [SerializeField] private float destroyParticlesSeconds;
         [SerializeField] private GameObject model;
         [SerializeField] private ParryBomb parryBomb;
+        [SerializeField] private AK.Wwise.Event explosionSound;
         
         private Coroutine _destroyCoroutine;
         
@@ -29,6 +30,7 @@ namespace Attacks.ParryProjectile
 
         private IEnumerator DestroyObstacleCoroutine()
         {
+            explosionSound.Post(gameObject);
             model.gameObject.SetActive(false);
             destroyParticleObject.gameObject.SetActive(true);
             yield return new WaitForSeconds(destroyParticlesSeconds);

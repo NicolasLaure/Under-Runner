@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9539a63b5a4fc444bb6ce473d55bb2bc, type: 3}
+  m_Name: 32842BA4-9E41-478A-AF59-E47F8DA111FF
+  m_EditorClassIdentifier: 
+  objectName: SA_Lv1_EV_BossLv1_Damage_Die_Explotion
+  id: 3075663134
+  guid: 32842BA4-9E41-478A-AF59-E47F8DA111FF

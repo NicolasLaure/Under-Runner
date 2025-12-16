@@ -12,7 +12,8 @@ namespace LevelManagement.Sequences
         [SerializeField] private float playerVelocity;
         [SerializeField] private float finishZPosition;
         [SerializeField] private string creditsScene = "Credits";
-
+        [SerializeField] private AK.Wwise.Event stopAllSfx;
+        
         [Header("Events")] 
         [SerializeField] private VoidEventChannelSO onPlayerLockEvent;
         [SerializeField] private VoidEventChannelSO onEndCinematicStartEvent;
@@ -50,6 +51,7 @@ namespace LevelManagement.Sequences
 
         private IEnumerator HandleOpenCredits()
         {
+            stopAllSfx?.Post(gameObject);
             onChangeSceneEvent?.RaiseEvent(creditsScene);
             yield return null;
         }

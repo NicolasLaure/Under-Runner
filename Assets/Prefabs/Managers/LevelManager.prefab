@@ -63,6 +63,12 @@ MonoBehaviour:
   onTryAgainCanvasEvent: {fileID: 11400000, guid: 45952cb3995e2054ea77145faefe979e, type: 2}
   onResetGameplayEvent: {fileID: 11400000, guid: ab870950ec2b0124da9411e0e9f8faa6, type: 2}
   onOpenSceneEvent: {fileID: 11400000, guid: 354db69ebeb57ea4bae77a4710ebb339, type: 2}
+  resettedMusicState:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!114 &4072355942097122109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,6 +121,10 @@ MonoBehaviour:
   playerVelocity: 10
   finishZPosition: 44
   creditsScene: Credits
+  stopAllSfx:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: dc9cf9f7049b4724ab64460945a342bd, type: 2}
   onPlayerLockEvent: {fileID: 0}
   onEndCinematicStartEvent: {fileID: 0}
   onCinematicStartEvent: {fileID: 11400000, guid: 49bed95fec698814188e97e4aef4801b, type: 2}
