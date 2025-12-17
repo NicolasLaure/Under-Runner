@@ -154,7 +154,7 @@ namespace Health
             onSumHealthEvent?.RaiseEvent(CurrentHp);
         }
 
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
+#if UNITY_EDITOR || DEVELOPMENT_BUILD || ENABLE_CHEATS
         public void ToggleInvulnerability()
         {
             canTakeDamage = !canTakeDamage;

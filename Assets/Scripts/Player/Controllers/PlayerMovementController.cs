@@ -40,37 +40,37 @@ namespace Player
 
         private void OnDisable()
         {
-            _actualMovementController.OnDisable();
+            _actualMovementController?.OnDisable();
             onMinionsStartEvent?.onEvent.RemoveListener(HandleFreeMovement);
             onObstaclesStartEvent?.onEvent.RemoveListener(HandleRoadsMovement);
         }
 
         public void OnUpdate()
         {
-            _actualMovementController.OnUpdate();
+            _actualMovementController?.OnUpdate();
         }
 
         public void TiltAround()
         {
-            _actualMovementController.TiltAround();
+            _actualMovementController?.TiltAround();
         }
 
         public void ToggleMoveability()
         {
-            _actualMovementController.ToggleMoveability();
+            _actualMovementController?.ToggleMoveability();
         }
 
         public void ToggleMoveability(bool value)
         {
-            _actualMovementController.ToggleMoveability(value);
+            _actualMovementController?.ToggleMoveability(value);
         }
 
         public void SetActualMovementController(IMovementController newController)
         {
-            _actualMovementController.OnDisable();
+            _actualMovementController?.OnDisable();
             _actualMovementController = newController;
-            _actualMovementController.OnEnable();
-            _actualMovementController.HandleZPosition();
+            _actualMovementController?.OnEnable();
+            _actualMovementController?.HandleZPosition();
         }
     }
 }
