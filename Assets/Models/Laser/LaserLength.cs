@@ -8,7 +8,7 @@ public class LaserLength : MonoBehaviour
     [SerializeField] private float laserWidth = 2;
     [SerializeField] LineRenderer beamLineRenderer;
     [SerializeField] ParticleSystem startParticleSystem;
-
+    
     private float _currentLaserLength;
 
     public void UpdateBeamWidth()
@@ -26,5 +26,15 @@ public class LaserLength : MonoBehaviour
     {
         var emission = startParticleSystem.emission;
         emission.rateOverTime = Mathf.Lerp(0, 60, Mathf.Clamp(laserLength, 0, 1));
+    }
+
+    public void SetLaserGradient(Gradient newColor)
+    {
+        beamLineRenderer.colorGradient = newColor;
+    }
+
+    public void SetLineParticles(bool hasParticles)
+    {
+        startParticleSystem.gameObject.SetActive(hasParticles);
     }
 }
