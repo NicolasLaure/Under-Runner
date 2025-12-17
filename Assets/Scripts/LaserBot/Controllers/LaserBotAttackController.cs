@@ -14,7 +14,10 @@ namespace LaserBot.Controllers
         [SerializeField] private Material laserChargeMat;
         [SerializeField] private Material laserMat;
         [SerializeField] private LaserCollider laserCollider;
-
+        [SerializeField] private LaserLength laserBeam;
+        [SerializeField] private Gradient chargeLaserGradient;
+        [SerializeField] private Gradient attackLaserGradient;
+        
         private bool _isAttacking;
         private Coroutine _attackCoroutine;
 
@@ -23,6 +26,10 @@ namespace LaserBot.Controllers
             _attackCoroutine = StartCoroutine(StartCharge());
 
             _isAttacking = true;
+            laserBeam.UpdateBeamWidth();
+            laserBeam.UpdateStartParticleEmission();
+            laserBeam.SetLaserGradient(chargeLaserGradient);
+            laserBeam.SetLineParticles(false);
         }
 
         private void OnDisable()
@@ -71,6 +78,8 @@ namespace LaserBot.Controllers
                 yield return null;
             }
 
+            laserBeam.SetLaserGradient(attackLaserGradient);
+            laserBeam.SetLineParticles(true);
             laserCollider.SetCollision(true);
             laser.GetComponent<Renderer>().material = laserMat;
 

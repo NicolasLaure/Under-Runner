@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FirstLoopConfig
   m_EditorClassIdentifier: 
   obstacleData:
-    obstaclesDuration: 1
+    obstaclesDuration: 20
     obstacleCooldown: 0.5
     timeToWarn: 1
     minDistance: 1
