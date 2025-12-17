@@ -19,6 +19,6 @@ MonoBehaviour:
   attackDuration: 0.5
   damage: 5
   entryExitDuration: 1.25
-  upperMiddle: {x: 0, y: 1.1, z: 13.5}
-  leftMiddle: {x: -10, y: 1.1, z: 1}
-  rightMiddle: {x: 10, y: 1.1, z: 1}
+  upperMiddle: {x: 0, y: 1.5, z: 13.5}
+  leftMiddle: {x: -10, y: 1.5, z: 1}
+  rightMiddle: {x: 10, y: 1.5, z: 1}
