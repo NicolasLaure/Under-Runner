@@ -1318,6 +1318,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3177043994517530796, guid: f4906dae6745a6b45b667f49b6cf33e5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6052649256079392548, guid: f4906dae6745a6b45b667f49b6cf33e5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.89
@@ -1945,6 +1949,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 432327987}
   m_CullTransparentMesh: 1
+--- !u!1 &458928663 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7538814886899646896, guid: f4906dae6745a6b45b667f49b6cf33e5, type: 3}
+  m_PrefabInstance: {fileID: 332087127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &471464652
 GameObject:
   m_ObjectHideFlags: 0
@@ -2322,6 +2331,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599454032}
   m_CullTransparentMesh: 1
+--- !u!4 &601178267 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3724809919548018600, guid: f4906dae6745a6b45b667f49b6cf33e5, type: 3}
+  m_PrefabInstance: {fileID: 332087127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &624786484
 GameObject:
   m_ObjectHideFlags: 0
@@ -4399,6 +4413,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minionAnim: {fileID: 1034291937}
   redBeamAnim: {fileID: 744055812}
+  redBeam: {fileID: 458928663}
+  goForScale: {fileID: 1638311130}
+  aimTransform: {fileID: 601178267}
+  delayForBeamToAppear: 1
+  beamMaxLength: 20
+  timeForBeamToTurnOn: 0.2
+  timeForEachFlicker: 0.05
+  delayForFlickering: 3
 --- !u!4 &1319289512
 Transform:
   m_ObjectHideFlags: 0
@@ -5607,6 +5629,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1621909387}
   m_CullTransparentMesh: 1
+--- !u!1 &1638311130 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2050231130084693438, guid: f4906dae6745a6b45b667f49b6cf33e5, type: 3}
+  m_PrefabInstance: {fileID: 332087127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1657614387
 PrefabInstance:
   m_ObjectHideFlags: 0
