@@ -256,6 +256,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2702406538475482927}
+  - {fileID: 2068174966758339461}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &3178462573864947935
@@ -498,3 +499,100 @@ Transform:
   - {fileID: 135720869587968667}
   m_Father: {fileID: 615876611427916382}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2303354904572367937
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6052649256079392548}
+    m_Modifications:
+    - target: {fileID: 235466154444646340, guid: 084d360986be7824180033eda13b736e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 235466154444646340, guid: 084d360986be7824180033eda13b736e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.329
+      objectReference: {fileID: 0}
+    - target: {fileID: 235466154444646340, guid: 084d360986be7824180033eda13b736e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.642
+      objectReference: {fileID: 0}
+    - target: {fileID: 235466154444646340, guid: 084d360986be7824180033eda13b736e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 235466154444646340, guid: 084d360986be7824180033eda13b736e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 8.7659685e-15
+      objectReference: {fileID: 0}
+    - target: {fileID: 235466154444646340, guid: 084d360986be7824180033eda13b736e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.00000009362675
+      objectReference: {fileID: 0}
+    - target: {fileID: 235466154444646340, guid: 084d360986be7824180033eda13b736e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.00000009362675
+      objectReference: {fileID: 0}
+    - target: {fileID: 235466154444646340, guid: 084d360986be7824180033eda13b736e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 235466154444646340, guid: 084d360986be7824180033eda13b736e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 235466154444646340, guid: 084d360986be7824180033eda13b736e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5290849803229578076, guid: 084d360986be7824180033eda13b736e, type: 3}
+      propertyPath: m_Name
+      value: RedBeamVFX
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5290849803229578076, guid: 084d360986be7824180033eda13b736e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 533576845437943808}
+  m_SourcePrefab: {fileID: 100100000, guid: 084d360986be7824180033eda13b736e, type: 3}
+--- !u!4 &2068174966758339461 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 235466154444646340, guid: 084d360986be7824180033eda13b736e, type: 3}
+  m_PrefabInstance: {fileID: 2303354904572367937}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6240853055420585757 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5290849803229578076, guid: 084d360986be7824180033eda13b736e, type: 3}
+  m_PrefabInstance: {fileID: 2303354904572367937}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1773428102 &533576845437943808
+ParentConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6240853055420585757}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Weight: 1
+  m_TranslationAtRest: {x: 0, y: 1.329, z: 0.642}
+  m_RotationAtRest: {x: 0, y: 0, z: 0}
+  m_TranslationOffsets:
+  - {x: 0, y: 0.2483257, z: 0.70306575}
+  m_RotationOffsets:
+  - {x: 0, y: 0, z: 0}
+  m_AffectTranslationX: 1
+  m_AffectTranslationY: 1
+  m_AffectTranslationZ: 1
+  m_AffectRotationX: 1
+  m_AffectRotationY: 1
+  m_AffectRotationZ: 1
+  m_Active: 1
+  m_IsLocked: 1
+  m_Sources:
+  - sourceTransform: {fileID: 2196093980245649819}
+    weight: 1
