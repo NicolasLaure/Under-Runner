@@ -16,11 +16,12 @@ public class TestMinionC : MonoBehaviour
     bool flickering = false;
     [SerializeField] float timeForEachFlicker;
     [SerializeField] float delayForFlickering;
+    [SerializeField] GameObject damagingBeamGO;
     
     public void Charge()
     {
         minionAnim.SetTrigger("Charge");
-        redBeamAnim.SetTrigger("Charge");
+        
         Invoke("TurnOnRedBeam", delayForBeamToAppear);
         Invoke("StartFlickering", delayForFlickering);
     }
@@ -29,6 +30,8 @@ public class TestMinionC : MonoBehaviour
         minionAnim.SetTrigger("Release");
         redBeamAnim.SetTrigger("Release");
         flickering = false;
+        damagingBeamGO.SetActive(false);
+        damagingBeamGO.SetActive(true);
     }
     public void TurnOnRedBeam()
     {
@@ -36,6 +39,7 @@ public class TestMinionC : MonoBehaviour
     }
     void StartFlickering()
     {
+        redBeamAnim.SetTrigger("Charge");
         flickering = true;
         StartCoroutine(FlickerCoroutine());
     }

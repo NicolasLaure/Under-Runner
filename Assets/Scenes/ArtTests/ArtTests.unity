@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &16342573 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7166196287782500694, guid: f4906dae6745a6b45b667f49b6cf33e5, type: 3}
+  m_PrefabInstance: {fileID: 332087127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &52491521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1318,6 +1323,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2087283236954240820, guid: f4906dae6745a6b45b667f49b6cf33e5, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3177043994517530796, guid: f4906dae6745a6b45b667f49b6cf33e5, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -4421,6 +4430,7 @@ MonoBehaviour:
   timeForBeamToTurnOn: 0.2
   timeForEachFlicker: 0.05
   delayForFlickering: 3
+  damagingBeamGO: {fileID: 16342573}
 --- !u!4 &1319289512
 Transform:
   m_ObjectHideFlags: 0
@@ -7322,6 +7332,103 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 888cc095ec39bab4f9e9ee5c57d5900d, type: 3}
+--- !u!1001 &2017998898379575688
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1978096385526405593, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978096385526405593, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978096385526405593, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978096385526405593, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978096385526405593, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978096385526405593, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978096385526405593, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978096385526405593, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978096385526405593, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978096385526405593, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153697913333238252, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
+      propertyPath: m_Name
+      value: DamagingBeam
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153697913333238252, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3205369948798300086, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3205369948798300086, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Name
+      value: Duration
+      objectReference: {fileID: 0}
+    - target: {fileID: 3205369948798300086, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[1].m_Name
+      value: Inner Beam Scale Multiplier
+      objectReference: {fileID: 0}
+    - target: {fileID: 3205369948798300086, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3205369948798300086, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[1].m_Value
+      value: 0.259
+      objectReference: {fileID: 0}
+    - target: {fileID: 3205369948798300086, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Overridden
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3205369948798300086, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[1].m_Overridden
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6071093154003093390, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6071093154003093390, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
 --- !u!1001 &3002401889854087508
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7595,3 +7702,4 @@ SceneRoots:
   - {fileID: 5530129021185478466}
   - {fileID: 332087127}
   - {fileID: 1319289512}
+  - {fileID: 2017998898379575688}
