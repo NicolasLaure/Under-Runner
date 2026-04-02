@@ -13,8 +13,8 @@ public class TestMinionC : MonoBehaviour
     [SerializeField] float delayForBeamToAppear;
     [SerializeField] float beamMaxLength;
     [SerializeField] float timeForBeamToTurnOn;
-    bool flickering = false;
     [SerializeField] float timeForEachFlicker;
+    [SerializeField] int ammountOfFlickers;
     [SerializeField] float delayForFlickering;
     [SerializeField] GameObject damagingBeamGO;
     
@@ -27,11 +27,7 @@ public class TestMinionC : MonoBehaviour
     }
     public void Release()
     {
-        minionAnim.SetTrigger("Release");
-        redBeamAnim.SetTrigger("Release");
-        flickering = false;
-        damagingBeamGO.SetActive(false);
-        damagingBeamGO.SetActive(true);
+        
     }
     public void TurnOnRedBeam()
     {
@@ -39,8 +35,7 @@ public class TestMinionC : MonoBehaviour
     }
     void StartFlickering()
     {
-        redBeamAnim.SetTrigger("Charge");
-        flickering = true;
+       
         StartCoroutine(FlickerCoroutine());
     }
     IEnumerator TurnOnRedBeamCoroutine()
@@ -57,22 +52,44 @@ public class TestMinionC : MonoBehaviour
             yield return null;
         }
         goForScale.transform.localScale = new Vector3(goForScale.transform.localScale.x, goForScale.transform.localScale.y, beamMaxLength);
+        redBeamAnim.SetTrigger("Charge");
     }
     IEnumerator FlickerCoroutine()
     {
         bool isOn = true;
         float timer = 0;
-        while (flickering)
+        int ammountOfFlickersDone = 0;
+        while (ammountOfFlickersDone < ammountOfFlickers)
         {
             timer += Time.deltaTime;
             if(timer >= timeForEachFlicker)
             {
                 isOn = !isOn;
+                ammountOfFlickersDone++;
                 timer = 0;
             }
             redBeam.SetActive(isOn);
             yield return null;
         }
+
+        redBeamAnim.SetTrigger("Release");
+
+        float currentLength = 0;
+        redBeam.SetActive(true);
+        timer = 0;
+        while (timer < timeForBeamToTurnOn)
+        {
+            timer += Time.deltaTime;
+            currentLength = Mathf.Clamp((timer / timeForBeamToTurnOn) * beamMaxLength, beamMaxLength,0);
+            goForScale.transform.localScale = new Vector3(goForScale.transform.localScale.x, goForScale.transform.localScale.y, currentLength);
+            yield return null;
+        }
+        goForScale.transform.localScale = new Vector3(goForScale.transform.localScale.x, goForScale.transform.localScale.y, 0);
         redBeam.SetActive(false);
+        minionAnim.SetTrigger("Release");
+        damagingBeamGO.SetActive(false);
+        damagingBeamGO.SetActive(true);
+
+
     }
 }

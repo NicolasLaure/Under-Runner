@@ -4425,11 +4425,12 @@ MonoBehaviour:
   redBeam: {fileID: 458928663}
   goForScale: {fileID: 1638311130}
   aimTransform: {fileID: 601178267}
-  delayForBeamToAppear: 1
+  delayForBeamToAppear: 0.7
   beamMaxLength: 20
   timeForBeamToTurnOn: 0.2
   timeForEachFlicker: 0.05
-  delayForFlickering: 3
+  ammountOfFlickers: 15
+  delayForFlickering: 1.5
   damagingBeamGO: {fileID: 16342573}
 --- !u!4 &1319289512
 Transform:
@@ -7390,7 +7391,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3205369948798300086, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3205369948798300086, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Name
@@ -7401,6 +7402,10 @@ PrefabInstance:
       value: Inner Beam Scale Multiplier
       objectReference: {fileID: 0}
     - target: {fileID: 3205369948798300086, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[2].m_Name
+      value: InnerBeamScaleFactor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3205369948798300086, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Value
       value: 1
       objectReference: {fileID: 0}
@@ -7409,11 +7414,19 @@ PrefabInstance:
       value: 0.259
       objectReference: {fileID: 0}
     - target: {fileID: 3205369948798300086, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[2].m_Value
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3205369948798300086, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Overridden
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3205369948798300086, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[1].m_Overridden
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3205369948798300086, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[2].m_Overridden
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6071093154003093390, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
