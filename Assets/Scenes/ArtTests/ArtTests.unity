@@ -4430,7 +4430,32 @@ MonoBehaviour:
   timeForBeamToTurnOn: 0.2
   timeForEachFlicker: 0.05
   ammountOfFlickers: 15
+  flickerDuration: 1.5
   delayForFlickering: 1.5
+  flickerDurationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -5.138288
+      outSlope: -5.138288
+      tangentMode: 0
+      weightedMode: 2
+      inWeight: 0
+      outWeight: 0.19333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.16741928
+      outSlope: -0.16741928
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.25333333
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   damagingBeamGO: {fileID: 16342573}
 --- !u!4 &1319289512
 Transform:

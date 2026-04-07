@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class TestMinionC : MonoBehaviour
 {
@@ -15,7 +16,9 @@ public class TestMinionC : MonoBehaviour
     [SerializeField] float timeForBeamToTurnOn;
     [SerializeField] float timeForEachFlicker;
     [SerializeField] int ammountOfFlickers;
+    [SerializeField] float flickerDuration;
     [SerializeField] float delayForFlickering;
+    [SerializeField] AnimationCurve flickerDurationCurve;
     [SerializeField] GameObject damagingBeamGO;
     
     public void Charge()
@@ -52,27 +55,23 @@ public class TestMinionC : MonoBehaviour
             yield return null;
         }
         goForScale.transform.localScale = new Vector3(goForScale.transform.localScale.x, goForScale.transform.localScale.y, beamMaxLength);
-        redBeamAnim.SetTrigger("Charge");
+        
     }
     IEnumerator FlickerCoroutine()
     {
-        bool isOn = true;
+        
         float timer = 0;
-        int ammountOfFlickersDone = 0;
-        while (ammountOfFlickersDone < ammountOfFlickers)
+        while(timer < flickerDuration)
         {
             timer += Time.deltaTime;
-            if(timer >= timeForEachFlicker)
-            {
-                isOn = !isOn;
-                ammountOfFlickersDone++;
-                timer = 0;
-            }
-            redBeam.SetActive(isOn);
+            float x = timer / flickerDuration;
+            float curveValue = Mathf.Sin(Mathf.Pow(x, 2) * 50) * -1;
+            redBeam.SetActive(curveValue > 0);
             yield return null;
         }
+        
 
-        redBeamAnim.SetTrigger("Release");
+        redBeamAnim.SetTrigger("Charge");
 
         float currentLength = 0;
         redBeam.SetActive(true);
@@ -85,6 +84,8 @@ public class TestMinionC : MonoBehaviour
             yield return null;
         }
         goForScale.transform.localScale = new Vector3(goForScale.transform.localScale.x, goForScale.transform.localScale.y, 0);
+        redBeamAnim.SetTrigger("Release");
+        yield return new WaitForSeconds(0.2f);
         redBeam.SetActive(false);
         minionAnim.SetTrigger("Release");
         damagingBeamGO.SetActive(false);
