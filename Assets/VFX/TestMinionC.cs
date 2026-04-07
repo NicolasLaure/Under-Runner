@@ -15,10 +15,8 @@ public class TestMinionC : MonoBehaviour
     [SerializeField] float beamMaxLength;
     [SerializeField] float timeForBeamToTurnOn;
     [SerializeField] float timeForEachFlicker;
-    [SerializeField] int ammountOfFlickers;
     [SerializeField] float flickerDuration;
     [SerializeField] float delayForFlickering;
-    [SerializeField] AnimationCurve flickerDurationCurve;
     [SerializeField] GameObject damagingBeamGO;
     
     public void Charge()
@@ -59,19 +57,24 @@ public class TestMinionC : MonoBehaviour
     }
     IEnumerator FlickerCoroutine()
     {
-        
+        bool hasStartedCharging = false;
         float timer = 0;
         while(timer < flickerDuration)
         {
             timer += Time.deltaTime;
             float x = timer / flickerDuration;
-            float curveValue = Mathf.Sin(Mathf.Pow(x, 2) * 50) * -1;
+            float curveValue = Mathf.Sin(Mathf.Pow(x, 2) * 100) * -1;
             redBeam.SetActive(curveValue > 0);
+            if(!hasStartedCharging && timer > flickerDuration * (2f/3f))
+            {
+                hasStartedCharging = true;
+                redBeamAnim.SetTrigger("Charge");
+            }
             yield return null;
         }
         
 
-        redBeamAnim.SetTrigger("Charge");
+        
 
         float currentLength = 0;
         redBeam.SetActive(true);
@@ -85,7 +88,7 @@ public class TestMinionC : MonoBehaviour
         }
         goForScale.transform.localScale = new Vector3(goForScale.transform.localScale.x, goForScale.transform.localScale.y, 0);
         redBeamAnim.SetTrigger("Release");
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.4f);
         redBeam.SetActive(false);
         minionAnim.SetTrigger("Release");
         damagingBeamGO.SetActive(false);

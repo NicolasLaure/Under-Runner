@@ -948,7 +948,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3205369948798300086, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3205369948798300086, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Name
@@ -959,8 +959,12 @@ PrefabInstance:
       value: Size
       objectReference: {fileID: 0}
     - target: {fileID: 3205369948798300086, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
-      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[1].m_Value
-      value: 0.25
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[2].m_Value
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3205369948798300086, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[3].m_Value
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3205369948798300086, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Overridden
