@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &16342573 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7166196287782500694, guid: f4906dae6745a6b45b667f49b6cf33e5, type: 3}
-  m_PrefabInstance: {fileID: 332087127}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &52491521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1323,6 +1318,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2068174966758339461, guid: f4906dae6745a6b45b667f49b6cf33e5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2087283236954240820, guid: f4906dae6745a6b45b667f49b6cf33e5, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -1885,7 +1884,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Charge
+  m_text: Aim
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1962,11 +1961,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 432327987}
   m_CullTransparentMesh: 1
---- !u!1 &458928663 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7538814886899646896, guid: f4906dae6745a6b45b667f49b6cf33e5, type: 3}
-  m_PrefabInstance: {fileID: 332087127}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &471464652
 GameObject:
   m_ObjectHideFlags: 0
@@ -2344,11 +2338,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599454032}
   m_CullTransparentMesh: 1
---- !u!4 &601178267 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3724809919548018600, guid: f4906dae6745a6b45b667f49b6cf33e5, type: 3}
-  m_PrefabInstance: {fileID: 332087127}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &624786484
 GameObject:
   m_ObjectHideFlags: 0
@@ -2734,11 +2723,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &744055812 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2497736080496499260, guid: f4906dae6745a6b45b667f49b6cf33e5, type: 3}
-  m_PrefabInstance: {fileID: 332087127}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &795614668
 GameObject:
   m_ObjectHideFlags: 0
@@ -3867,11 +3851,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 988705877}
   m_CullTransparentMesh: 1
---- !u!95 &1034291937 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 3178462573864947935, guid: f4906dae6745a6b45b667f49b6cf33e5, type: 3}
-  m_PrefabInstance: {fileID: 332087127}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1085660828
 GameObject:
   m_ObjectHideFlags: 0
@@ -4424,19 +4403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69e96e79fcef86a43b984c54e3bbd6dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minionAnim: {fileID: 1034291937}
-  redBeamAnim: {fileID: 744055812}
-  redBeam: {fileID: 458928663}
-  goForScale: {fileID: 1638311130}
-  aimTransform: {fileID: 601178267}
-  delayForBeamToAppear: 0.7
-  beamMaxLength: 20
-  timeForBeamToTurnOn: 0.1
-  timeForEachFlicker: 0.05
-  flickerDuration: 1.5
-  delayForFlickering: 1.5
-  delayAfterFlickering: 0.1
-  damagingBeamGO: {fileID: 16342573}
+  vfxController: {fileID: 1586623393}
 --- !u!4 &1319289512
 Transform:
   m_ObjectHideFlags: 0
@@ -4509,7 +4476,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Releas
+  m_text: Charge
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5022,7 +4989,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1319289511}
         m_TargetAssemblyTypeName: TestMinionC, Assembly-CSharp
-        m_MethodName: Release
+        m_MethodName: Charge
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5388,7 +5355,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1319289511}
         m_TargetAssemblyTypeName: TestMinionC, Assembly-CSharp
-        m_MethodName: Charge
+        m_MethodName: Aim
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5436,6 +5403,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1578575845}
   m_CullTransparentMesh: 1
+--- !u!114 &1586623393 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3438406037818076244, guid: f4906dae6745a6b45b667f49b6cf33e5, type: 3}
+  m_PrefabInstance: {fileID: 332087127}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e1fdf174b2a27d40b03e98ca7734b1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1613612456
 GameObject:
   m_ObjectHideFlags: 0
@@ -5645,11 +5623,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1621909387}
   m_CullTransparentMesh: 1
---- !u!1 &1638311130 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2050231130084693438, guid: f4906dae6745a6b45b667f49b6cf33e5, type: 3}
-  m_PrefabInstance: {fileID: 332087127}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1657614387
 PrefabInstance:
   m_ObjectHideFlags: 0

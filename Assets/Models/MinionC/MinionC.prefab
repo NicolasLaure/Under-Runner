@@ -522,6 +522,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6052649256079392548}
   - component: {fileID: 3178462573864947935}
+  - component: {fileID: 3438406037818076244}
   m_Layer: 0
   m_Name: MinionC
   m_TagString: Untagged
@@ -570,6 +571,28 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3438406037818076244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7575695425492535760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e1fdf174b2a27d40b03e98ca7734b1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minionAnim: {fileID: 3178462573864947935}
+  redBeamAnim: {fileID: 2497736080496499260}
+  redBeam: {fileID: 7538814886899646896}
+  goForScale: {fileID: 2050231130084693438}
+  aimTransform: {fileID: 3724809919548018600}
+  timeForBeamToAppear: 0.5
+  beamMaxLength: 20
+  timeForBeamToTurnOn: 0.1
+  vortexAnimationDuration: 0.28
+  damagingBeamGO: {fileID: 7166196287782500694}
 --- !u!1 &8255242296971353702
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,31 +822,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 235466154444646340, guid: 084d360986be7824180033eda13b736e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.017273426
       objectReference: {fileID: 0}
     - target: {fileID: 235466154444646340, guid: 084d360986be7824180033eda13b736e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.329
+      value: 1.0404552
       objectReference: {fileID: 0}
     - target: {fileID: 235466154444646340, guid: 084d360986be7824180033eda13b736e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.642
+      value: 0.9772881
       objectReference: {fileID: 0}
     - target: {fileID: 235466154444646340, guid: 084d360986be7824180033eda13b736e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.998857
       objectReference: {fileID: 0}
     - target: {fileID: 235466154444646340, guid: 084d360986be7824180033eda13b736e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 8.7659685e-15
+      value: -0.030596107
       objectReference: {fileID: 0}
     - target: {fileID: 235466154444646340, guid: 084d360986be7824180033eda13b736e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00000009362675
+      value: -0.015161564
       objectReference: {fileID: 0}
     - target: {fileID: 235466154444646340, guid: 084d360986be7824180033eda13b736e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.00000009362675
+      value: 0.033446155
       objectReference: {fileID: 0}
     - target: {fileID: 235466154444646340, guid: 084d360986be7824180033eda13b736e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -904,6 +927,11 @@ PrefabInstance:
 --- !u!4 &2068174966758339461 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 235466154444646340, guid: 084d360986be7824180033eda13b736e, type: 3}
+  m_PrefabInstance: {fileID: 2303354904572367937}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2497736080496499260 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4422135366452711037, guid: 084d360986be7824180033eda13b736e, type: 3}
   m_PrefabInstance: {fileID: 2303354904572367937}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &6240853055420585757 stripped
@@ -1028,7 +1056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6071093154003093390, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
       propertyPath: m_CastShadows
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1038,5 +1066,10 @@ PrefabInstance:
 --- !u!4 &6036162892941289827 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1978096385526405593, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
+  m_PrefabInstance: {fileID: 5239760067957485754}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7166196287782500694 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3153697913333238252, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
   m_PrefabInstance: {fileID: 5239760067957485754}
   m_PrefabAsset: {fileID: 0}
