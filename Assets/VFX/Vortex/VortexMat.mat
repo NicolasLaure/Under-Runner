@@ -28,7 +28,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _VortexTexture:
-        m_Texture: {fileID: 2800000, guid: aab6c7f81b0d4a2498913baae304cc98, type: 3}
+        m_Texture: {fileID: 2800000, guid: adc3969858243fd48b7804c2e334eb0f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -46,24 +46,24 @@ Material:
     m_Ints: []
     m_Floats:
     - _Alpha: 1
-    - _AlphaClipping: 0.24
+    - _AlphaClipping: 0.5
     - _DissolveAmmount: -1.5
     - _InnerTwistSpeed: 1
     - _InnerTwistStrength: 10
     - _LengthScale: 190.7
     - _NoisePanningSpeed: -0.15
-    - _NoiseScale: 1.12
+    - _NoiseScale: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     - _RadialShearStrength: -9.3
     - _Radial_Scale: -2.7
     - _Rotation: 0
     - _Scale: 2
-    - _Shrink: 1
+    - _Shrink: 0.463
     - _Twirl_Strength: 3
     - _TwistSpeed: 3
     m_Colors:
-    - _Color: {r: 56.529766, g: 88.87507, b: 95.8745, a: 1}
+    - _Color: {r: 7.0662208, g: 11.109384, b: 11.984312, a: 1}
     - _InnerColor: {r: 0.4425, g: 0.69874996, b: 0.75, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &671853165679328243

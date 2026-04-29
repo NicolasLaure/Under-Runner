@@ -837,13 +837,61 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2421580826760660292, guid: 084d360986be7824180033eda13b736e, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2421580826760660292, guid: 084d360986be7824180033eda13b736e, type: 3}
+      propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2421580826760660292, guid: 084d360986be7824180033eda13b736e, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[4].m_Name
+      value: SparkThickness
+      objectReference: {fileID: 0}
+    - target: {fileID: 2421580826760660292, guid: 084d360986be7824180033eda13b736e, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[4].m_Value
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2421580826760660292, guid: 084d360986be7824180033eda13b736e, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[4].m_Overridden
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2421580826760660292, guid: 084d360986be7824180033eda13b736e, type: 3}
+      propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[2].m_Name
+      value: SparkTexture
+      objectReference: {fileID: 0}
+    - target: {fileID: 2421580826760660292, guid: 084d360986be7824180033eda13b736e, type: 3}
+      propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[2].m_Value
+      value: 
+      objectReference: {fileID: 2800000, guid: 54dfc421ea8961741a74fed308dce4b6, type: 3}
+    - target: {fileID: 2421580826760660292, guid: 084d360986be7824180033eda13b736e, type: 3}
+      propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[2].m_Overridden
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2592903763577574546, guid: 084d360986be7824180033eda13b736e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245774727839322315, guid: 084d360986be7824180033eda13b736e, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5290849803229578076, guid: 084d360986be7824180033eda13b736e, type: 3}
       propertyPath: m_Name
       value: RedBeamVFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 5290849803229578076, guid: 084d360986be7824180033eda13b736e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6062698840958696748, guid: 084d360986be7824180033eda13b736e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6747871102773740175, guid: 084d360986be7824180033eda13b736e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

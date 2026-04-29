@@ -1325,9 +1325,13 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2087283236954240820, guid: f4906dae6745a6b45b667f49b6cf33e5, type: 3}
       propertyPath: m_CastShadows
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3177043994517530796, guid: f4906dae6745a6b45b667f49b6cf33e5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5464029002445580653, guid: f4906dae6745a6b45b667f49b6cf33e5, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -4427,10 +4431,11 @@ MonoBehaviour:
   aimTransform: {fileID: 601178267}
   delayForBeamToAppear: 0.7
   beamMaxLength: 20
-  timeForBeamToTurnOn: 0.2
+  timeForBeamToTurnOn: 0.1
   timeForEachFlicker: 0.05
   flickerDuration: 1.5
   delayForFlickering: 1.5
+  delayAfterFlickering: 0.1
   damagingBeamGO: {fileID: 16342573}
 --- !u!4 &1319289512
 Transform:
@@ -7435,7 +7440,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6071093154003093390, guid: c34c6820c7b7a334e9d06880b2deb395, type: 3}
       propertyPath: m_CastShadows
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

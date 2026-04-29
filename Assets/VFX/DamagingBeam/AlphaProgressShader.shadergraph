@@ -10,9 +10,6 @@
             "m_Id": "caf88c5df39c4321ae12a4f7b7ac1bd7"
         },
         {
-            "m_Id": "567482eb209e44b38e12b8d4eba0a007"
-        },
-        {
             "m_Id": "1d13d70b778540d1b6fa0b4bbbbcd6e5"
         },
         {
@@ -77,9 +74,6 @@
         },
         {
             "m_Id": "65af9b0cc0d54deeaabf0a0904c2889c"
-        },
-        {
-            "m_Id": "89f21b7e28e3478d91a1fe1a6588be39"
         },
         {
             "m_Id": "c50057957083450fbccb3e7d7d01f87e"
@@ -1630,34 +1624,6 @@
 
 {
     "m_SGVersion": 1,
-    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
-    "m_ObjectId": "567482eb209e44b38e12b8d4eba0a007",
-    "m_Guid": {
-        "m_GuidSerialized": "d86593a7-4bb9-4101-bf50-701b6b4db455"
-    },
-    "m_Name": "UVProgress",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "UVProgress",
-    "m_DefaultReferenceName": "_UVProgress",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
-    "m_DismissedVersion": 0,
-    "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
-    "m_Hidden": false,
-    "m_Value": 0.0,
-    "m_FloatType": 1,
-    "m_RangeValues": {
-        "x": 0.0,
-        "y": 1.0
-    }
-}
-
-{
-    "m_SGVersion": 1,
     "m_Type": "UnityEditor.ShaderGraph.PositionNode",
     "m_ObjectId": "5be91c9eada5498fa415ef33c80a3598",
     "m_Group": {
@@ -2161,42 +2127,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
-    "m_ObjectId": "89f21b7e28e3478d91a1fe1a6588be39",
-    "m_Group": {
-        "m_Id": ""
-    },
-    "m_Name": "Property",
-    "m_DrawState": {
-        "m_Expanded": true,
-        "m_Position": {
-            "serializedVersion": "2",
-            "x": -1216.800048828125,
-            "y": -475.9999694824219,
-            "width": 137.5999755859375,
-            "height": 33.600006103515628
-        }
-    },
-    "m_Slots": [
-        {
-            "m_Id": "fabbdb56c6814db6a6e80016de009066"
-        }
-    ],
-    "synonyms": [],
-    "m_Precision": 0,
-    "m_PreviewExpanded": true,
-    "m_DismissedVersion": 0,
-    "m_PreviewMode": 0,
-    "m_CustomColors": {
-        "m_SerializableColors": []
-    },
-    "m_Property": {
-        "m_Id": "567482eb209e44b38e12b8d4eba0a007"
-    }
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector3Node",
     "m_ObjectId": "8bc586ef12b445db95b014796873545b",
     "m_Group": {
@@ -2505,9 +2435,6 @@
         },
         {
             "m_Id": "1d13d70b778540d1b6fa0b4bbbbcd6e5"
-        },
-        {
-            "m_Id": "567482eb209e44b38e12b8d4eba0a007"
         },
         {
             "m_Id": "c77df424a1c242ca98d175a254c11d50"
@@ -3769,21 +3696,6 @@
         "m_SerializableColors": []
     },
     "m_SerializedDescriptor": "VertexDescription.Tangent"
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
-    "m_ObjectId": "fabbdb56c6814db6a6e80016de009066",
-    "m_Id": 0,
-    "m_DisplayName": "UVProgress",
-    "m_SlotType": 1,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "Out",
-    "m_StageCapability": 3,
-    "m_Value": 0.0,
-    "m_DefaultValue": 0.0,
-    "m_Labels": []
 }
 
 {

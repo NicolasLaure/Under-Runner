@@ -17,6 +17,7 @@ public class TestMinionC : MonoBehaviour
     [SerializeField] float timeForEachFlicker;
     [SerializeField] float flickerDuration;
     [SerializeField] float delayForFlickering;
+    [SerializeField] float delayAfterFlickering;
     [SerializeField] GameObject damagingBeamGO;
     
     public void Charge()
@@ -72,10 +73,10 @@ public class TestMinionC : MonoBehaviour
             }
             yield return null;
         }
-        
 
-        
 
+
+        redBeamAnim.SetTrigger("Release");
         float currentLength = 0;
         redBeam.SetActive(true);
         timer = 0;
@@ -87,7 +88,7 @@ public class TestMinionC : MonoBehaviour
             yield return null;
         }
         goForScale.transform.localScale = new Vector3(goForScale.transform.localScale.x, goForScale.transform.localScale.y, 0);
-        redBeamAnim.SetTrigger("Release");
+        
         yield return new WaitForSeconds(0.4f);
         redBeam.SetActive(false);
         minionAnim.SetTrigger("Release");

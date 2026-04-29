@@ -64,7 +64,7 @@ Material:
     - _TwistSpeed: 3
     m_Colors:
     - _Color: {r: 2.0292394, g: 3.1903334, b: 3.4415905, a: 1}
-    - _InnerColor: {r: 0.4425, g: 0.69874996, b: 0.75, a: 1}
+    - _InnerColor: {r: 0.0036191207, g: 0.0057009156, b: 0.006117275, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &671853165679328243
 MonoBehaviour:

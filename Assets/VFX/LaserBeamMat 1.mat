@@ -47,7 +47,7 @@ Material:
     m_Floats:
     - _BeamIncrement: 0
     - _DissolveAmount: 0
-    - _NoiseAmount: 0.059
+    - _NoiseAmount: 0.037
     - _NoisePower: 2
     - _NoiseScale: 25
     - _QueueControl: 0
@@ -55,8 +55,8 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _MainSpeed: {r: -0.5, g: 0, b: 0, a: 0}
-    - _NoiseSpeed: {r: -3.78, g: 0, b: 0, a: 0}
-    - _Tint: {r: 3.4822028, g: 0, b: 0, a: 1}
+    - _NoiseSpeed: {r: -5.99, g: 0, b: 0, a: 0}
+    - _Tint: {r: 236.0708, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &8687378452269116995
 MonoBehaviour:
