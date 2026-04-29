@@ -19,6 +19,7 @@ public class MinionCVFXController : MonoBehaviour
 
     public delegate void AnimationEvent(MinionCVFXController vfxController);
     public static event AnimationEvent OnFinishedWarning;
+    public static event AnimationEvent OnFinishedAiming;
 
     public void SetBeamMaxLength(float length)
     {
@@ -54,7 +55,7 @@ public class MinionCVFXController : MonoBehaviour
     IEnumerator TurnOnRedBeamCoroutine()
     {
         yield return new WaitForSeconds(timeForBeamToAppear);
-        aimTransform.position = new Vector3(beamMaxLength, aimTransform.position.y, aimTransform.position.z);
+        aimTransform.localPosition = new Vector3(beamMaxLength, aimTransform.localPosition.y, aimTransform.localPosition.z);
         float currentLength = 0;
         redBeam.SetActive(true);
         float timer = 0;
@@ -66,7 +67,7 @@ public class MinionCVFXController : MonoBehaviour
             yield return null;
         }
         goForScale.transform.localScale = new Vector3(goForScale.transform.localScale.x, goForScale.transform.localScale.y, beamMaxLength);
-
+        if (OnFinishedAiming != null) OnFinishedAiming(this);
     }
     IEnumerator FlickerCoroutine()
     {
