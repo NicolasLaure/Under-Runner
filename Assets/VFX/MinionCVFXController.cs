@@ -24,10 +24,32 @@ public class MinionCVFXController : MonoBehaviour
     public static event AnimationEvent OnFinishedAiming;
     bool aimingDown = false;
 
+    /// <summary>
+    /// Use positive values for them to go on the same direction as the minion or negatives when going backwards.
+    /// </summary>
+    public void UpdateWheelSpinningSpeed(float speed)
+    {
+        minionAnim.SetFloat("WheelSpeed", speed);
+    }
+    /// <summary>
+    /// Changes direction of the wheels, were 0 is left, 1 is right, and 0.5 is centered.
+    /// </summary>
+    public void UpdateWheelSteering(float steer)
+    {
+        minionAnim.SetFloat("DirectionWheels", Mathf.Clamp01(steer));
+
+    }
+    /// <summary>
+    /// In case the range of the red beam is too short, it can be changed here.
+    /// </summary>
     public void SetBeamMaxLength(float length)
     {
         beamMaxLength = length;
     }
+    /// <summary>
+    /// Plays the Aim animation, and fires "OnFinishedAiming" when the red beam is on.
+    /// </summary>
+    /// <param name="aimDown"> Decides which animations should take place for this current Minion. </param>
     public void Aim(bool aimDown)
     {
         aimingDown = aimDown;
@@ -35,8 +57,10 @@ public class MinionCVFXController : MonoBehaviour
         minionAnim.SetTrigger("Aim");
         StartCoroutine(TurnOnRedBeamCoroutine());
     }
-    
 
+    /// <summary>
+    /// Gives a warning for the desired duration and then fires "OnFinishedWarning" once its ready to Release the charged shot.
+    /// </summary>
     public void Charge(float warningDuration)
     {
         isFlickering = true;
@@ -44,6 +68,10 @@ public class MinionCVFXController : MonoBehaviour
         StartCoroutine(FlickerCoroutine());
     }
 
+
+    /// <summary>
+    /// Fires the beam and goes back to IDLE.
+    /// </summary>
     public void Release()
     {
         Transform transformToMatch;
@@ -58,6 +86,9 @@ public class MinionCVFXController : MonoBehaviour
         damagingBeamGO.SetActive(false);
         damagingBeamGO.SetActive(true);
     }
+    /// <summary>
+    /// Enters the "leaving" animation.
+    /// </summary>
     public void Leave()
     {
         minionAnim.SetTrigger("Leave");
@@ -108,4 +139,5 @@ public class MinionCVFXController : MonoBehaviour
             OnFinishedWarning(this);
         }
     }
+
 }

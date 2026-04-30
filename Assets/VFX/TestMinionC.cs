@@ -18,7 +18,7 @@ public class TestMinionC : MonoBehaviour
     }
     public void Aim()
     {
-        vfxController.Aim(false);
+        vfxController.Aim(true);
     }
     public void Charge()
     {
