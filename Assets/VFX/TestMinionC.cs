@@ -18,7 +18,7 @@ public class TestMinionC : MonoBehaviour
     }
     public void Aim()
     {
-        vfxController.Aim(true);
+        vfxController.Aim(false);
     }
     public void Charge()
     {
@@ -30,5 +30,11 @@ public class TestMinionC : MonoBehaviour
         {
             vfxController.Release();
         }
+        Invoke("Leave", 3f);
+
+    }
+    void Leave()
+    {
+        vfxController.Leave();
     }
 }

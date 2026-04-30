@@ -685,7 +685,7 @@ MonoBehaviour:
   goForScale: {fileID: 2050231130084693438}
   aimTransform: {fileID: 3724809919548018600}
   timeForBeamToAppear: 0.5
-  beamMaxLength: 20
+  beamMaxLength: 40
   timeForBeamToTurnOn: 0.1
   vortexAnimationDuration: 0.28
   damagingBeamGO: {fileID: 7166196287782500694}

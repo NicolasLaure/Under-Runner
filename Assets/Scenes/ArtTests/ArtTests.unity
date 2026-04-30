@@ -1364,7 +1364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6052649256079392548, guid: f4906dae6745a6b45b667f49b6cf33e5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.8
+      value: -10.97
       objectReference: {fileID: 0}
     - target: {fileID: 6052649256079392548, guid: f4906dae6745a6b45b667f49b6cf33e5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3349,17 +3349,6 @@ RectTransform:
   m_AnchoredPosition: {x: -601, y: -65.17624}
   m_SizeDelta: {x: 642.16003, y: 878.7575}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &905065026 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3438406037818076244, guid: f4906dae6745a6b45b667f49b6cf33e5, type: 3}
-  m_PrefabInstance: {fileID: 1146356718}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e1fdf174b2a27d40b03e98ca7734b1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &924783147
 GameObject:
   m_ObjectHideFlags: 0
@@ -3639,7 +3628,7 @@ Transform:
   m_GameObject: {fileID: 961739749}
   serializedVersion: 2
   m_LocalRotation: {x: 0.38366574, y: -0, z: -0, w: 0.9234721}
-  m_LocalPosition: {x: -0.2557117, y: 9.21, z: -5.55}
+  m_LocalPosition: {x: -0.2557117, y: 10.68, z: -7.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4522,6 +4511,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235091555}
   m_CullTransparentMesh: 1
+--- !u!114 &1303815125 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3438406037818076244, guid: f4906dae6745a6b45b667f49b6cf33e5, type: 3}
+  m_PrefabInstance: {fileID: 332087127}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e1fdf174b2a27d40b03e98ca7734b1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1319289510
 GameObject:
   m_ObjectHideFlags: 0
@@ -4551,7 +4551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69e96e79fcef86a43b984c54e3bbd6dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vfxController: {fileID: 905065026}
+  vfxController: {fileID: 1303815125}
 --- !u!4 &1319289512
 Transform:
   m_ObjectHideFlags: 0
