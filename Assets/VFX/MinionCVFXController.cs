@@ -15,11 +15,14 @@ public class MinionCVFXController : MonoBehaviour
     [SerializeField] float vortexAnimationDuration = 0.28f;
     float flickerDuration = 1;
     [SerializeField] GameObject damagingBeamGO;
+    [SerializeField] Transform frontBeamTransform;
+    [SerializeField] Transform sideBeamTransform;
     bool isFlickering = false;
 
     public delegate void AnimationEvent(MinionCVFXController vfxController);
     public static event AnimationEvent OnFinishedWarning;
     public static event AnimationEvent OnFinishedAiming;
+    bool aimingDown = false;
 
     public void SetBeamMaxLength(float length)
     {
@@ -27,6 +30,7 @@ public class MinionCVFXController : MonoBehaviour
     }
     public void Aim(bool aimDown)
     {
+        aimingDown = aimDown;
         minionAnim.SetBool("isAimingDown", aimDown);
         minionAnim.SetTrigger("Aim");
         StartCoroutine(TurnOnRedBeamCoroutine());
@@ -42,6 +46,13 @@ public class MinionCVFXController : MonoBehaviour
 
     public void Release()
     {
+        Transform transformToMatch;
+        if (aimingDown) transformToMatch = frontBeamTransform;
+        else transformToMatch = sideBeamTransform;
+
+        damagingBeamGO.transform.position = transformToMatch.position;
+        damagingBeamGO.transform.rotation = transformToMatch.rotation;
+
         redBeam.SetActive(false);
         minionAnim.SetTrigger("Release");
         damagingBeamGO.SetActive(false);
@@ -55,7 +66,8 @@ public class MinionCVFXController : MonoBehaviour
     IEnumerator TurnOnRedBeamCoroutine()
     {
         yield return new WaitForSeconds(timeForBeamToAppear);
-        aimTransform.localPosition = new Vector3(beamMaxLength, aimTransform.localPosition.y, aimTransform.localPosition.z);
+        if(!aimingDown)aimTransform.localPosition = new Vector3(beamMaxLength, aimTransform.localPosition.y, 0);
+        else aimTransform.localPosition = new Vector3(0, aimTransform.localPosition.y, beamMaxLength);
         float currentLength = 0;
         redBeam.SetActive(true);
         float timer = 0;
