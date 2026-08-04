@@ -112,7 +112,11 @@
             "m_Id": "0941a1b69cd94714a29d6750c500160a"
         }
     ],
-    "m_GroupDatas": [],
+    "m_GroupDatas": [
+        {
+            "m_Id": "51b414682798409b9a01b7de127d3545"
+        }
+    ],
     "m_StickyNoteDatas": [],
     "m_Edges": [
         {
@@ -593,17 +597,17 @@
     "m_Type": "UnityEditor.ShaderGraph.Matrix3Node",
     "m_ObjectId": "0941a1b69cd94714a29d6750c500160a",
     "m_Group": {
-        "m_Id": ""
+        "m_Id": "51b414682798409b9a01b7de127d3545"
     },
     "m_Name": "Matrix 3x3",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -994.9390869140625,
-            "y": -1366.939208984375,
-            "width": 133.5999755859375,
-            "height": 174.4000244140625
+            "x": -910.39990234375,
+            "y": -1439.199951171875,
+            "width": 132.7999267578125,
+            "height": 174.39990234375
         }
     },
     "m_Slots": [
@@ -1457,6 +1461,17 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.GroupData",
+    "m_ObjectId": "51b414682798409b9a01b7de127d3545",
+    "m_Title": "REDUCE RADIUS OF BEAM",
+    "m_Position": {
+        "x": -935.9998779296875,
+        "y": -1557.5999755859375
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.TangentMaterialSlot",
     "m_ObjectId": "51e58dd5e7eb4feb853064961383274a",
     "m_Id": 0,
@@ -1861,16 +1876,16 @@
     "m_Type": "UnityEditor.ShaderGraph.MultiplyNode",
     "m_ObjectId": "6ed9e239cb3645debf7dc34f28df2d08",
     "m_Group": {
-        "m_Id": ""
+        "m_Id": "51b414682798409b9a01b7de127d3545"
     },
     "m_Name": "Multiply",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -743.2000122070313,
-            "y": -1440.0,
-            "width": 208.0,
+            "x": -689.5999145507813,
+            "y": -1497.5999755859375,
+            "width": 207.99990844726563,
             "height": 301.5999755859375
         }
     },

@@ -1000,7 +1000,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5290849803229578076, guid: 084d360986be7824180033eda13b736e, type: 3}
       propertyPath: m_Name
-      value: RedBeamVFX
+      value: WarningVFX
       objectReference: {fileID: 0}
     - target: {fileID: 5290849803229578076, guid: 084d360986be7824180033eda13b736e, type: 3}
       propertyPath: m_IsActive
