@@ -6,7 +6,8 @@ using UnityEngine.Rendering.Universal;
 
 public class TestMinionC : MonoBehaviour
 {
-    [SerializeField] MinionCVFXController vfxController;
+    [SerializeField] MinionCVFXController minionOnSideVfxController;
+    [SerializeField] MinionCVFXController minionInFrontVfxController;
 
     private void OnEnable()
     {
@@ -16,25 +17,43 @@ public class TestMinionC : MonoBehaviour
     {
         MinionCVFXController.OnFinishedWarning -= Release;
     }
-    public void Aim()
+    public void AimFront()
     {
-        vfxController.Aim(true);
+        minionInFrontVfxController.Aim(true);
     }
-    public void Charge()
+    public void ChargeFront()
     {
-        vfxController.Charge(2f);
+        minionInFrontVfxController.Charge(2f);
+    }
+    public void AimSide()
+    {
+        minionOnSideVfxController.Aim(false);
+    }
+    public void ChargeSide()
+    {
+        minionOnSideVfxController.Charge(2f);
     }
     void Release(MinionCVFXController vfxController)
     {
-        if(vfxController == this.vfxController)
+        if(vfxController == minionOnSideVfxController)
         {
-            vfxController.Release();
+            minionOnSideVfxController.Release();
+            Invoke("LeaveSide", 3f);
         }
-        Invoke("Leave", 3f);
+        else if(vfxController == minionInFrontVfxController)
+        {
+            minionInFrontVfxController.Release();
+            Invoke("LeaveFront", 3f);
+        }
+        
 
     }
-    void Leave()
+    void LeaveFront()
     {
-        vfxController.Leave();
+        minionInFrontVfxController.Leave();
+    }
+    void LeaveSide()
+    {
+        minionOnSideVfxController.Leave();
     }
 }

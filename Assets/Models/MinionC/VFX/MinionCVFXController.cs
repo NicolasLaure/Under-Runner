@@ -70,7 +70,7 @@ public class MinionCVFXController : MonoBehaviour
 
 
     /// <summary>
-    /// Fires the beam and goes back to IDLE.
+    /// Fires the beam and goes to end state animation.
     /// </summary>
     public void Release()
     {
